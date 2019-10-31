@@ -1,0 +1,4 @@
+language: csharp
+solution: TetrisVideoGame.sln
+mono:
+- latest

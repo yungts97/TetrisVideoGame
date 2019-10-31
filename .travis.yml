@@ -3,7 +3,7 @@ solution: TetrisVideoGame.sln
 
 jobs:
   include:
-    - dotnet: 2.1.502
+    - dotnet: 2.1.13
       mono: none
 
     - mono: latest

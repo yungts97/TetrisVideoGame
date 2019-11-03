@@ -1,5 +1,9 @@
 language: csharp
 solution: TetrisVideoGame.sln
-dotnet: 3.0.100
 
+jobs:
+  include:
+    - dotnet: 3.0.100
+      mono: none
 
+    - mono: latest

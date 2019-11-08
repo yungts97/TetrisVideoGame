@@ -107,7 +107,7 @@ namespace TetrisVideoGame
 			dialog.Width = 350;
 			dialog.Height = 250;
 			dialog.ShowDialog();
-			if (dialog.Visible == false && dialog.flag)
+			if (!dialog.Visible && dialog.flag)
 			{
 				if (dialog.txtName.Text != "" || dialog.txtName.Text != null)
 				{

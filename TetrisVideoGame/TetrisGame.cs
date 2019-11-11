@@ -345,12 +345,26 @@ namespace TetrisVideoGame
 						_playboard.DrawShadowGrids(this, _tetromino); // Shadow
 					}
 				}
-				else if (e.KeyCode == Keys.Up)
+				else if (e.KeyCode == Keys.X)
 				{
 					_playboard.RemoveShape(_tetromino);
 					int x = _tetromino.PositionX;
 					int y = _tetromino.PositionY;
-					_tetromino.changeRotation();
+					_tetromino.leftRotation();
+					if (_collisionDetector.CheckRotationCollision(_tetromino, _playboard))
+					{
+						_tetromino.changeBackRotation(x, y);
+					}
+					_playboard.DrawShape(_tetromino);
+					_playboard.DrawShadowGrids(this, _tetromino); // Shadow
+
+				}
+				else if (e.KeyCode == Keys.Z)
+				{
+					_playboard.RemoveShape(_tetromino);
+					int x = _tetromino.PositionX;
+					int y = _tetromino.PositionY;
+					_tetromino.rightRotation();
 					if (_collisionDetector.CheckRotationCollision(_tetromino, _playboard))
 					{
 						_tetromino.changeBackRotation(x, y);

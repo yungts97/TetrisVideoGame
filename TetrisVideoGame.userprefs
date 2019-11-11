@@ -7,9 +7,9 @@
       <Breakpoint file="D:\TetrisVideoGame\TetrisVideoGame\PlayFieldBoard.cs" line="135" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="TetrisVideoGame\TetrisGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TetrisVideoGame\PlayFieldBoard.cs">
     <Files>
-      <File FileName="TetrisVideoGame\TetrisGame.cs" Line="43" Column="72" />
+      <File FileName="TetrisVideoGame\PlayFieldBoard.cs" Line="113" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

@@ -63,6 +63,7 @@
     <Compile Include="HorizontalBombUnitTest.cs" />
     <Compile Include="LargeBombUnitTest.cs" />
     <Compile Include="Self_rotate_mode.cs" />
+    <Compile Include="UpSideDownMode.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />

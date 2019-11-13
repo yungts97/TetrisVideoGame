@@ -304,5 +304,23 @@
       "TargetRow": 15,
       "Quantity": 0
     }
+  },
+  {
+    "Name": "dfgfd",
+    "Level": 1,
+    "ClearedLines": 0,
+    "Score": 0,
+    "ColourBombs": {
+      "Colors": [],
+      "Quantity": 0
+    },
+    "HorizontalBombs": {
+      "TargetRow": 19,
+      "Quantity": 0
+    },
+    "LargeBombs": {
+      "TargetRow": 15,
+      "Quantity": 0
+    }
   }
 ]

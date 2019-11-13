@@ -14,7 +14,7 @@ namespace TetrisVideoGame
 		private PictureBox logo;
 		private Label title;
 		//private TetrisGame game;
-		private Self_rotate_mode game;
+		private UpSideDownMode game;
 		private PlayerNameWindows dialog;
 		private HighScoreWindows dialog2;
 		private HelpWindows dialog3;
@@ -114,7 +114,7 @@ namespace TetrisVideoGame
 				{
 					dialog.Dispose();
 					//game = new TetrisGame(30, 10, 20, dialog.txtName.Text);
-					game = new Self_rotate_mode(30, 10, 20, dialog.txtName.Text);
+					game = new UpSideDownMode(30, 10, 20, dialog.txtName.Text);
 					game.StartPosition = FormStartPosition.CenterScreen;
 					game.Text = "My First Form";
 					game.Width = 850;

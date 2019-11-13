@@ -36,9 +36,26 @@ namespace TetrisVideoGame
 		{
 			form.FormBorderStyle = FormBorderStyle.None;
 
-			for (int i = 0; i < _rows; ++i)
+			/*for (int i = 0; i < _rows; ++i)
 			{
 				for (int j = 0; j < _columns; ++j)
+				{
+					grids[i, j] = new Label();
+					grids[i, j].Width = _blockSize;
+					grids[i, j].Height = _blockSize;
+					grids[i, j].BorderStyle = BorderStyle.FixedSingle;
+					grids[i, j].BackColor = Color.Black;
+					grids[i, j].Left = 270 + _blockSize * j;
+					grids[i, j].Top = 130 + i * _blockSize;
+					grids[i, j].Visible = true;
+					//grids[i, j].Paint += new PaintEventHandler(grids_Paint);
+					form.Controls.Add(grids[i, j]);
+				}
+			}*/
+
+			for (int i = 19; i >= 0; --i)
+			{
+				for (int j = 9; j >= 0; --j)
 				{
 					grids[i, j] = new Label();
 					grids[i, j].Width = _blockSize;
@@ -66,21 +83,21 @@ namespace TetrisVideoGame
 
 		public void DrawLandedBlocks() // to redraw the landed blocks in the playfield
 		{
-			for (int i = 0; i < _rows; ++i)   // clean the previous blocks
+			for (int i = 19; i >= 0; --i)   // clean the previous blocks
 			{
-				for (int j = 0; j < _columns; ++j)
+				for (int j = 9; j >= 0; --j)
 				{
 					grids[i, j].BackColor = Color.Black;
 
 				}
 			}
-			for (int i = 0; i < _rows; ++i)  // draw the current landed blocks
+			for (int i = 19; i >= 0; --i)   // draw the current landed blocks
 			{
-				for (int j = 0; j < _columns; ++j)
+				for (int j = 9; j >= 0; --j)
 				{
-					if (gridSigns[i, j] != 0)
+					if (gridSigns[19-i, 9-j] != 0)
 					{
-						grids[i, j].BackColor = _ColorDictionary[gridSigns[i, j]];
+						grids[i, j].BackColor = _ColorDictionary[gridSigns[19-i, 9-j]];
 					}
 				}
 			}
@@ -106,7 +123,7 @@ namespace TetrisVideoGame
 				{
 					if (_tetromino.TetromoniShape[i, j] != 0)
 					{
-						grids[(_tetromino.PositionY + i), (_tetromino.PositionX + j)].BackColor = _tetromino.ShapeColor;
+						grids[19-(_tetromino.PositionY + i), 9-(_tetromino.PositionX + j)].BackColor = _tetromino.ShapeColor;
 					}
 				}
 			}
@@ -119,7 +136,7 @@ namespace TetrisVideoGame
 				{
 					if (_tetromino.TetromoniShape[i, j] != 0)
 					{
-						grids[(_tetromino.PositionY + i), (_tetromino.PositionX + j)].BackColor = Color.Black;
+						grids[19-(_tetromino.PositionY + i), 9-(_tetromino.PositionX + j)].BackColor = Color.Black;
 					}
 				}
 			}
@@ -135,9 +152,9 @@ namespace TetrisVideoGame
 		{
 			shadowColor = _tetromino.ShapeColor;
 
-			for (int i = 0; i < 20; ++i)
+			for (int i = 19; i >= 0; --i)
 			{
-				for (int j = 0; j < 10; ++j)
+				for (int j = 9; j >= 0; --j)
 				{
 					shadowGrids[i, j] = false;
 				}
@@ -168,9 +185,9 @@ namespace TetrisVideoGame
 			}
 
 			int c = 0;
-			for (int a = 0; a < 20; ++a)
+			for (int a = 19; a >= 0; --a)
 			{
-				for (int b = 0; b < 10; ++b)
+				for (int b = 9; b >= 0; --b)
 				{
 					if (shadowGrids[a, b])
 					{
@@ -181,8 +198,8 @@ namespace TetrisVideoGame
 						shadowBlocks[c].Height = _blockSize;
 						shadowBlocks[c].BorderStyle = BorderStyle.FixedSingle;
 						shadowBlocks[c].BackColor = Color.Black;
-						shadowBlocks[c].Left = 270 + _blockSize * b;
-						shadowBlocks[c].Top = 130 + a * _blockSize;
+						shadowBlocks[c].Left = 270 + _blockSize * (9-b);
+						shadowBlocks[c].Top = 130 + (19-a) * _blockSize;
 						shadowBlocks[c].Paint += new PaintEventHandler(grids_Paint);
 						form.Controls.Add(shadowBlocks[c]);
 						if ((_tetromino.PositionY+_tetromino.Height-1) < a)

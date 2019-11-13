@@ -10,7 +10,7 @@ namespace TetrisVideoGame
 		public BombMessageBox()
 		{
 			msg = new Label();
-			msg.Text = "You are obtain 1 Colour Boom!";
+			msg.Text = "You obtained 1 Colour Bomb!";
 			msg.BackColor = Color.Transparent;
 			msg.Visible = true;
 			msg.ForeColor = Color.Black;

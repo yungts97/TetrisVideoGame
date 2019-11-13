@@ -443,7 +443,7 @@ namespace TetrisVideoGame
 					}
 					else
 					{
-						_myBombMsgBox.UpdateMessage("You don't have any Colour Boom!");
+						_myBombMsgBox.UpdateMessage("You don't have any Colour Bomb!");
 						_myBombMsgBox.Opacity = 1;
 						BombMsgTimer.Enabled = true;
 					}
@@ -459,7 +459,7 @@ namespace TetrisVideoGame
 					}
 					else
 					{
-						_myBombMsgBox.UpdateMessage("You don't have any Horizontal Boom!");
+						_myBombMsgBox.UpdateMessage("You don't have any Horizontal Bomb!");
 						_myBombMsgBox.Opacity = 1;
 						BombMsgTimer.Enabled = true;
 					}
@@ -475,7 +475,7 @@ namespace TetrisVideoGame
 					}
 					else
 					{
-						_myBombMsgBox.UpdateMessage("You don't have any Large Boom!");
+						_myBombMsgBox.UpdateMessage("You don't have any Large Bomb!");
 						_myBombMsgBox.Opacity = 1;
 						BombMsgTimer.Enabled = true;
 					}

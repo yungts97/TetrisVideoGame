@@ -151,12 +151,28 @@ namespace TetrisVideoGame
 
 			}
 		}
-		public void changeRotation()
+		public void leftRotation()
 		{
 			_rotation += 90;
-
 			if (_rotation == 360)
 				_rotation = 0;
+			_shape = setRotation(_type, _rotation);
+
+			//for rotation collision 
+			if (_posX + _width > 10)
+				_posX = 10 - _width;
+			if (_posY + _height > 20)
+				_posY = 20 - _height;
+		}
+		public void rightRotation()
+		{
+			_rotation -= 90;
+			if (_rotation == 360)
+				_rotation = 0;
+			if (_rotation == -90)
+			{
+				_rotation = 270;
+			}
 			_shape = setRotation(_type, _rotation);
 
 			//for rotation collision 

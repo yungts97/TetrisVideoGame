@@ -8,3 +8,8 @@ install:
 script:
  - msbuild /p:Configuration=Debug TetrisVideoGame.sln
  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./TetrisTest/bin/Debug/TetrisTest.dll
+
+notifications:
+  slack:
+    rooms:
+	  - swinburne-rcx2658:PWUJC3fueP7YctQpz7ifrwqn#general

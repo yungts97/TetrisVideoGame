@@ -10,7 +10,7 @@ namespace TetrisTest
         [Test]
         public void HorizontalBombUnitTest()
         {
-            TetrisVideoGame.HorizontalBomb myBomb = new TetrisVideoGame.HorizontalBomb(1);
+            HorizontalBomb myBomb = new HorizontalBomb(1);
             int[,] Gridsigns = new int[20, 10]{{ 0,0,0,0,0,0,0,0,0,0 },
                                                    { 0,0,0,0,0,0,0,0,0,0 },
                                                    { 0,0,0,0,0,0,0,0,0,0 },
@@ -65,7 +65,7 @@ namespace TetrisTest
         [Test]
         public void ColourBombUnitTest()
         {
-            TetrisVideoGame.ColourBomb myBomb = new TetrisVideoGame.ColourBomb(1);
+            ColourBomb myBomb = new ColourBomb(1);
             myBomb.AddBombColor(Color.FromArgb(255, 67, 92)); //this grids which is 3
 
             int[,] Gridsigns = new int[20, 10]{{ 0,0,0,0,0,0,0,0,0,0 },
@@ -122,7 +122,7 @@ namespace TetrisTest
         [Test]
         public void LargeBombUnitTest()
         {
-            TetrisVideoGame.LargeBomb myBomb = new TetrisVideoGame.LargeBomb(1);
+            LargeBomb myBomb = new LargeBomb(1);
             int[,] Gridsigns = new int[20, 10]{{ 0,0,0,0,0,0,0,0,0,0 },
                                                    { 0,0,0,0,0,0,0,0,0,0 },
                                                    { 0,0,0,0,0,0,0,0,0,0 },

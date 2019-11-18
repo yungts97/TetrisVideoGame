@@ -1,4 +1,4 @@
-﻿<Properties>
+﻿<Properties StartupConfiguration="{279C69B3-AE8A-416C-B137-53237D5DF908}|Default">
   <MonoDevelop.Ide.ItemProperties.TetrisVideoGame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -10,7 +10,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="TetrisVideoGame\TetrisGame.cs">
     <Files>
       <File FileName="TetrisVideoGame\PlayFieldBoard.cs" Line="129" Column="4" />
-      <File FileName="TetrisVideoGame\TetrisGame.cs" Line="294" Column="37" />
+      <File FileName="TetrisVideoGame\TetrisGame.cs" Line="303" Column="6" />
       <File FileName="TetrisVideoGame\Tetromino.cs" Line="41" Column="42" />
       <File FileName="TetrisVideoGame\HelpWindows.cs" Line="20" Column="19" />
       <File FileName="TetrisVideoGame\MainWindows.cs" Line="32" Column="26" />

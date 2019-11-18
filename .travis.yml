@@ -12,4 +12,4 @@ script:
 notifications:
   slack:
     rooms:
-	  - swinburne-rcx2658:PWUJC3fueP7YctQpz7ifrwqn#general
+    - swinburne-rcx2658:PWUJC3fueP7YctQpz7ifrwqn#general

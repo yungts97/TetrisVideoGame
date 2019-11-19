@@ -60,3 +60,4 @@ C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\normnfkc.nl
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\normnfkd.nlp
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.exe
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.pdb
+C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojResolveAssemblyReference.cache

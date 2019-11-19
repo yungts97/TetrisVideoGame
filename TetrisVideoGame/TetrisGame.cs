@@ -239,13 +239,14 @@ namespace TetrisVideoGame
 				}
 				if (sum == 10)
 				{
+					/*
 					if (_playboard.Grids[i, 0].Text == "X")
 					{
 						for (int j = 0; j < 10; ++j)
 						{
 							_playboard.Grids[i, j].Text = "";
 						}
-					}
+					}*/
 					for (int j = 0; j < 10; ++j)
 					{
 						_playboard.GridSigns[i, j] = 0;

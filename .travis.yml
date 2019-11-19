@@ -1,3 +1,15 @@
 language: csharp
 solution: TetrisVideoGame.sln
-mono: latest
+#mono:
+#- latest
+install:
+ - nuget restore TetrisVideoGame.sln
+ - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+script:
+ - msbuild /p:Configuration=Debug TetrisVideoGame.sln
+ - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./TetrisTest/bin/Debug/TetrisTest.dll
+
+notifications:
+  slack:
+    rooms:
+    - swinburne-rcx2658:PWUJC3fueP7YctQpz7ifrwqn#general

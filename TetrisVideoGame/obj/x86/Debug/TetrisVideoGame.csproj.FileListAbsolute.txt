@@ -34,6 +34,17 @@ C:\Users\Yungts\Documents\Projects\TetrisVideoGame\TetrisVideoGame\bin\Debug\nun
 C:\Users\Yungts\Documents\Projects\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojResolveAssemblyReference.cache
 C:\Users\Yungts\Documents\Projects\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.exe
 C:\Users\Yungts\Documents\Projects\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.pdb
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\TetrisVideoGame.exe
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\TetrisVideoGame.pdb
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\nunit.framework.dll
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\nunit.framework.pdb
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\nunit.framework.xml
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csproj.CoreCompileInputs.cache
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csproj.CopyComplete
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.exe
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.pdb
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\TetrisVideoGame.exe
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\TetrisVideoGame.pdb
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\mscorlib.dll
@@ -47,6 +58,6 @@ C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\normnfc.nlp
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\normnfd.nlp
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\normnfkc.nlp
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\normnfkd.nlp
-C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojResolveAssemblyReference.cache
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.exe
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.pdb
+C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojResolveAssemblyReference.cache

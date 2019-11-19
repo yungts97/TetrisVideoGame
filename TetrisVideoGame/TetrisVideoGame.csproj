@@ -62,7 +62,6 @@
     <Compile Include="ColourBombUnitTest.cs" />
     <Compile Include="HorizontalBombUnitTest.cs" />
     <Compile Include="LargeBombUnitTest.cs" />
-    <Compile Include="TetrisReverseGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />

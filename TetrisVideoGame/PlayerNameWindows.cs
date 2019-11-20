@@ -37,6 +37,9 @@ namespace TetrisVideoGame
 			txtName.Left = 30;
 			this.Controls.Add(txtName);
 
+
+			//not required anymore
+			/*
 			errorMessage = new Label();
 			errorMessage.Text = "The name cannot be empty! Please enter a name.";
 			errorMessage.Visible = false;
@@ -48,6 +51,7 @@ namespace TetrisVideoGame
 			errorMessage.Left = 30;
 			errorMessage.Top = 130;
 			this.Controls.Add(errorMessage);
+			*/
 
 			btnOk = new Button();
 			btnOk.Text = "Ok";
@@ -83,7 +87,12 @@ namespace TetrisVideoGame
 		{
 			if (txtName.Text == "" || txtName.Text == null)
 			{
-				errorMessage.Visible = true;
+
+				//add something here to add a default name
+				txtName.Text = "Anon";
+				flag = true;
+				this.Hide();
+				//errorMessage.Visible = true;
 			}
 			else
 			{

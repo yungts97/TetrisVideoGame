@@ -6,6 +6,8 @@ namespace TetrisVideoGame
 {
 	public class Tetromino
 	{
+		private int _spawnX = 4;
+		private int _spawnY = 0;
 		private int _posX;
 		private int _posY;
 		private Color _color;
@@ -18,15 +20,17 @@ namespace TetrisVideoGame
 
 		public Tetromino()
 		{
-			_posX = 4;
-			_posY = 0;
+			_posX = _spawnX;
+			_posY = _spawnY;
+			//_posY = 16;
 			_rotation = 0;
 			_isHold = false;
 		}
 		public Tetromino(ShapeType t)
 		{
-			_posX = 4;
-			_posY = 0;
+			_posX = _spawnX;
+			_posY = _spawnY;
+			//_posY = 16;
 			_type = t;
 			_rotation = 0;
 			_isHold = false;
@@ -181,6 +185,7 @@ namespace TetrisVideoGame
 			if (_posY + _height > 20)
 				_posY = 20 - _height;
 		}
+
 		public void resetRotation()
 		{
 			_rotation = 0;

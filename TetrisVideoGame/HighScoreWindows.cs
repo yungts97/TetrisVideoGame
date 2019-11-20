@@ -41,7 +41,7 @@ namespace TetrisVideoGame
 			btnOk.Text = "Ok";
 			btnOk.FlatStyle = FlatStyle.Flat;
 			btnOk.BackColor = Color.Transparent;
-			btnOk.Font = new Font("Arial", 10, FontStyle.Regular);
+			btnOk.Font = new Font("Times New Roman", 10, FontStyle.Regular);
 			btnOk.ForeColor = Color.White;
 			btnOk.AutoSize = true;
 			btnOk.Width = 130;

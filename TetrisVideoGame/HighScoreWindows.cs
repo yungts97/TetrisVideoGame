@@ -21,6 +21,7 @@ namespace TetrisVideoGame
 		public HighScoreWindows()
 		{
 			this.MaximumSize = new Size(630, 450);
+			this.BackgroundImage = Image.FromFile("Highscorebgi.jpg");
 			this.ShowInTaskbar = false;
 			recorder = new DataRecorder();
 
@@ -28,8 +29,8 @@ namespace TetrisVideoGame
 			title.Text = "Player High Score Board";
 			title.BackColor = Color.Transparent;
 			title.Visible = true;
-			title.ForeColor = Color.FromArgb(64, 64, 64);
-			title.Font = new Font("Arial", 15, FontStyle.Bold);
+			title.ForeColor = Color.FromArgb(255, 255, 255);
+			title.Font = new Font("Times New Roman", 15, FontStyle.Bold);
 			title.BringToFront();
 			title.AutoSize = true;
 			title.Left = 48;
@@ -39,7 +40,7 @@ namespace TetrisVideoGame
 			btnOk = new Button();
 			btnOk.Text = "Ok";
 			btnOk.FlatStyle = FlatStyle.Flat;
-			btnOk.BackColor = Color.FromArgb(64, 64, 64);
+			btnOk.BackColor = Color.Transparent;
 			btnOk.Font = new Font("Arial", 10, FontStyle.Regular);
 			btnOk.ForeColor = Color.White;
 			btnOk.AutoSize = true;
@@ -79,13 +80,15 @@ namespace TetrisVideoGame
 				columnHeader4,
 				columnHeader5});
 
-			mylist.ForeColor = Color.Black;
+			mylist.ForeColor = Color.White;
+			mylist.BackColor = Color.Black;
 			mylist.FullRowSelect = true;
-			mylist.GridLines = true;
+			mylist.GridLines = false;
 			mylist.HoverSelection = true;
 			mylist.LabelEdit = true;
 			mylist.Location = new Point(50, 83);
 			mylist.Size = new Size(535, 300);
+			mylist.BorderStyle = BorderStyle.None;
 			mylist.UseCompatibleStateImageBehavior = false;
 			mylist.View = View.Details;
 

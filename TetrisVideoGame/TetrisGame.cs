@@ -239,14 +239,13 @@ namespace TetrisVideoGame
 				}
 				if (sum == 10)
 				{
-					/*
 					if (_playboard.Grids[i, 0].Text == "X")
 					{
 						for (int j = 0; j < 10; ++j)
 						{
 							_playboard.Grids[i, j].Text = "";
 						}
-					}*/
+					}
 					for (int j = 0; j < 10; ++j)
 					{
 						_playboard.GridSigns[i, j] = 0;
@@ -295,7 +294,7 @@ namespace TetrisVideoGame
 					Color c = ColorDictionary[rand3];
 					_player.ColourBombs.Quantity += 1;
 					_player.ColourBombs.AddBombColor(c);
-					_myBombMsgBox.UpdateMessage("You are obtain 1 "+color + " Bomb!");
+					_myBombMsgBox.UpdateMessage("You are obtain 1 "+color + " Boom!");
 					_myBombMsgBox.Opacity = 1;
 					BombMsgTimer.Enabled = true;
 					_colourbombboard.updateQuantity(_player.ColourBombs.Quantity);
@@ -305,7 +304,7 @@ namespace TetrisVideoGame
 				else if (rand2 == 2)
 				{
 					_player.HorizontalBombs.Quantity += 1;
-					_myBombMsgBox.UpdateMessage("You are obtain 1 Horizontal Bomb!");
+					_myBombMsgBox.UpdateMessage("You are obtain 1 Horizontal Boom!");
 					_myBombMsgBox.Opacity = 1;
 					BombMsgTimer.Enabled = true;
 					_horizontalbombboard.updateQuantity(_player.HorizontalBombs.Quantity);
@@ -313,7 +312,7 @@ namespace TetrisVideoGame
 				else if (rand2 == 3)
 				{
 					_player.LargeBombs.Quantity += 1;
-					_myBombMsgBox.UpdateMessage("You are obtain 1 Large Bomb!");
+					_myBombMsgBox.UpdateMessage("You are obtain 1 Large Boom!");
 					_myBombMsgBox.Opacity = 1;
 					BombMsgTimer.Enabled = true;
 					_largebombboard.updateQuantity(_player.LargeBombs.Quantity);
@@ -444,7 +443,7 @@ namespace TetrisVideoGame
 					}
 					else
 					{
-						_myBombMsgBox.UpdateMessage("You don't have any Colour Bomb!");
+						_myBombMsgBox.UpdateMessage("You don't have any Colour Boom!");
 						_myBombMsgBox.Opacity = 1;
 						BombMsgTimer.Enabled = true;
 					}
@@ -460,7 +459,7 @@ namespace TetrisVideoGame
 					}
 					else
 					{
-						_myBombMsgBox.UpdateMessage("You don't have any Horizontal Bomb!");
+						_myBombMsgBox.UpdateMessage("You don't have any Horizontal Boom!");
 						_myBombMsgBox.Opacity = 1;
 						BombMsgTimer.Enabled = true;
 					}
@@ -476,7 +475,7 @@ namespace TetrisVideoGame
 					}
 					else
 					{
-						_myBombMsgBox.UpdateMessage("You don't have any Large Bomb!");
+						_myBombMsgBox.UpdateMessage("You don't have any Large Boom!");
 						_myBombMsgBox.Opacity = 1;
 						BombMsgTimer.Enabled = true;
 					}

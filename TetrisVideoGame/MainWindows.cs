@@ -10,6 +10,7 @@ namespace TetrisVideoGame
 		private Button btnStart;
 		private Button btnHighScore;
 		private Button btnHelp;
+		private Button btnSetting;
 		private Button btnExit;
 		private PictureBox logo;
 		private Label title;
@@ -17,6 +18,7 @@ namespace TetrisVideoGame
 		private PlayerNameWindows dialog;
 		private HighScoreWindows dialog2;
 		private HelpWindows dialog3;
+		private SettingWindow dialog4;
 
 		public MainWindows()
 		{
@@ -41,7 +43,7 @@ namespace TetrisVideoGame
 			logo.Height = 80;
 			logo.Visible = true;
 			logo.Left = 155;
-			logo.Top = 150;
+			logo.Top = 125;
 			this.Controls.Add(logo);
 
 
@@ -55,7 +57,7 @@ namespace TetrisVideoGame
 			btnStart.Width = 220;
 			btnStart.Height = 60;
 			btnStart.Left = 100;
-			btnStart.Top = 280;
+			btnStart.Top = 250;
 			btnStart.DialogResult = DialogResult.OK;
 			btnStart.Click += this.Btn_Start;
 			this.Controls.Add(btnStart);
@@ -68,7 +70,7 @@ namespace TetrisVideoGame
 			btnHighScore.Width = 220;
 			btnHighScore.Height = 60;
 			btnHighScore.Left = 100;
-			btnHighScore.Top = 370;
+			btnHighScore.Top = 340;
 			btnHighScore.Click += this.Btn_HighScore;
 			this.Controls.Add(btnHighScore);
 
@@ -80,9 +82,21 @@ namespace TetrisVideoGame
 			btnHelp.Width = 220;
 			btnHelp.Height = 60;
 			btnHelp.Left = 100;
-			btnHelp.Top = 460;
+			btnHelp.Top = 430;
 			btnHelp.Click += this.Btn_Help;
 			this.Controls.Add(btnHelp);
+
+			btnSetting = new Button();
+			btnSetting.Text = "Setting";
+			btnSetting.FlatStyle = FlatStyle.Flat;
+			btnSetting.Font = new Font("Arial", 15, FontStyle.Regular);
+			btnSetting.AutoSize = true;
+			btnSetting.Width = 220;
+			btnSetting.Height = 60;
+			btnSetting.Left = 100;
+			btnSetting.Top = 520;
+			btnSetting.Click += this.btn_Setting;
+			this.Controls.Add(btnSetting);
 
 			btnExit = new Button();
 			btnExit.Text = "Exit";
@@ -92,7 +106,7 @@ namespace TetrisVideoGame
 			btnExit.Width = 220;
 			btnExit.Height = 60;
 			btnExit.Left = 100;
-			btnExit.Top = 550;
+			btnExit.Top = 610;
 			btnExit.Click += Btn_Exit;
 			this.Controls.Add(btnExit);
 		}
@@ -107,7 +121,7 @@ namespace TetrisVideoGame
 			dialog.Width = 350;
 			dialog.Height = 250;
 			dialog.ShowDialog();
-			if (!dialog.Visible && dialog.flag)
+			if (dialog.Visible == false && dialog.flag)
 			{
 				if (dialog.txtName.Text != "" || dialog.txtName.Text != null)
 				{
@@ -148,6 +162,21 @@ namespace TetrisVideoGame
 			if (dialog3.ShowDialog() == DialogResult.OK)
 			{
 				dialog3.Dispose();
+			}
+		}
+
+		private void btn_Setting(object sender, EventArgs e)
+		{ 
+			dialog4 = new SettingWindow();
+			dialog4.BackColor = Color.FromArgb(240, 240, 240);
+			dialog4.StartPosition = FormStartPosition.CenterScreen;
+			dialog4.FormBorderStyle = FormBorderStyle.None;
+			dialog4.Name = "SettingDialog";
+			dialog4.Width = 420;
+			dialog4.Height = 680;
+			if (dialog4.ShowDialog() == DialogResult.OK)
+			{
+				dialog4.Dispose();
 			}
 		}
 

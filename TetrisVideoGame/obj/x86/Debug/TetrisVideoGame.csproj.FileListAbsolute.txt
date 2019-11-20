@@ -34,3 +34,13 @@ C:\Users\Yungts\Documents\Projects\TetrisVideoGame\TetrisVideoGame\bin\Debug\nun
 C:\Users\Yungts\Documents\Projects\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojResolveAssemblyReference.cache
 C:\Users\Yungts\Documents\Projects\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.exe
 C:\Users\Yungts\Documents\Projects\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.pdb
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\bin\Debug\TetrisVideoGame.exe
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\bin\Debug\TetrisVideoGame.pdb
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\bin\Debug\nunit.framework.dll
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\bin\Debug\nunit.framework.pdb
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\bin\Debug\nunit.framework.xml
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojResolveAssemblyReference.cache
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.exe
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.pdb

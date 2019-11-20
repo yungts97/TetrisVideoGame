@@ -26,7 +26,7 @@
       <File FileName="TetrisVideoGame\HorizontalBombUnitTest.cs" Line="25" Column="18" />
       <File FileName="TetrisVideoGame\LargeBombUnitTest.cs" Line="14" Column="40" />
       <File FileName="TetrisVideoGame\MainProgram.cs" Line="1" Column="1" />
-      <File FileName="TetrisVideoGame\HighScoreWindows.cs" Line="27" Column="28" />
+      <File FileName="TetrisVideoGame\HighScoreWindows.cs" Line="27" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

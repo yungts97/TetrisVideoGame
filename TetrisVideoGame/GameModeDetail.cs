@@ -140,6 +140,33 @@ namespace TetrisVideoGame
                 else
                     this.Show();
             }
+            else if (game_mode == 4)
+            {
+                PlayerNameWindows dialog = new PlayerNameWindows();
+                dialog.BackColor = Color.FromArgb(240, 240, 240);
+                dialog.StartPosition = FormStartPosition.CenterScreen;
+                dialog.FormBorderStyle = FormBorderStyle.None;
+                dialog.Name = "PlayerDialog";
+                dialog.Width = 350;
+                dialog.Height = 250;
+                dialog.ShowDialog();
+                if (!dialog.Visible && dialog.flag)
+                {
+                    if (dialog.txtName.Text != "" || dialog.txtName.Text != null)
+                    {
+                        dialog.Dispose();
+                        OppositeMode game = new OppositeMode(30, 10, 20, dialog.txtName.Text);
+                        game.StartPosition = FormStartPosition.CenterScreen;
+                        game.Text = "My First Form";
+                        game.Width = 850;
+                        game.Height = 850;
+                        game.Visible = true;
+                    }
+                    this.Hide();
+                }
+                else
+                    this.Show();
+            }
         }
     }
 }

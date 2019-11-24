@@ -1,0 +1,11 @@
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Release\TetrisVideoGame.exe
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Release\Newtonsoft.Json.dll
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Release\nunit.framework.dll
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Release\Newtonsoft.Json.xml
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Release\nunit.framework.pdb
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Release\nunit.framework.xml
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Release\TetrisVideoGame.Resource1.resources
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Release\TetrisVideoGame.csproj.GenerateResource.cache
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Release\TetrisVideoGame.csproj.CoreCompileInputs.cache
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Release\TetrisVideoGame.csproj.CopyComplete
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Release\TetrisVideoGame.exe

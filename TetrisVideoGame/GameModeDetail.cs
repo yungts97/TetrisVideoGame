@@ -12,7 +12,7 @@ namespace TetrisVideoGame
         private PictureBox PicBack;
         private PictureBox PicStart;
 
-        public GameModeDetail()
+        public GameModeDetail(int game_mode)
         {
             this.game_mode = game_mode;
             this.Name = "GameModeDetail";
@@ -57,7 +57,89 @@ namespace TetrisVideoGame
         }
         private void PicStart_OnClick(object sender, EventArgs e)
         {
-            
+            if (game_mode == 1)
+            {
+                PlayerNameWindows dialog = new PlayerNameWindows();
+                dialog.BackColor = Color.FromArgb(240, 240, 240);
+                dialog.StartPosition = FormStartPosition.CenterScreen;
+                dialog.FormBorderStyle = FormBorderStyle.None;
+                dialog.Name = "PlayerDialog";
+                dialog.Width = 350;
+                dialog.Height = 250;
+                this.Hide();
+                dialog.ShowDialog();
+                if (!dialog.Visible && dialog.flag)
+                {
+                    if (dialog.txtName.Text != "" || dialog.txtName.Text != null)
+                    {
+                        dialog.Dispose();
+                        TetrisGame game = new TetrisGame(30, 10, 20, dialog.txtName.Text);
+                        game.StartPosition = FormStartPosition.CenterScreen;
+                        game.Text = "My First Form";
+                        game.Width = 850;
+                        game.Height = 850;
+                        game.Visible = true;
+                    }
+                    this.Hide();
+                }
+                else
+                    this.Show();
+            }
+            else if (game_mode == 2)
+            {
+                PlayerNameWindows dialog = new PlayerNameWindows();
+                dialog.BackColor = Color.FromArgb(240, 240, 240);
+                dialog.StartPosition = FormStartPosition.CenterScreen;
+                dialog.FormBorderStyle = FormBorderStyle.None;
+                dialog.Name = "PlayerDialog";
+                dialog.Width = 350;
+                dialog.Height = 250;
+                this.Hide();
+                dialog.ShowDialog();
+                if (!dialog.Visible && dialog.flag)
+                {
+                    if (dialog.txtName.Text != "" || dialog.txtName.Text != null)
+                    {
+                        dialog.Dispose();
+                        SlipSlideGameMode game = new SlipSlideGameMode(30, 10, 20, dialog.txtName.Text);
+                        game.StartPosition = FormStartPosition.CenterScreen;
+                        game.Text = "My First Form";
+                        game.Width = 850;
+                        game.Height = 850;
+                        game.Visible = true;
+                    }
+                    this.Hide();
+                }
+                else
+                    this.Show();
+            }
+            else if (game_mode == 3)
+            {
+                PlayerNameWindows dialog = new PlayerNameWindows();
+                dialog.BackColor = Color.FromArgb(240, 240, 240);
+                dialog.StartPosition = FormStartPosition.CenterScreen;
+                dialog.FormBorderStyle = FormBorderStyle.None;
+                dialog.Name = "PlayerDialog";
+                dialog.Width = 350;
+                dialog.Height = 250;
+                dialog.ShowDialog();
+                if (!dialog.Visible && dialog.flag)
+                {
+                    if (dialog.txtName.Text != "" || dialog.txtName.Text != null)
+                    {
+                        dialog.Dispose();
+                        Self_rotate_mode game = new Self_rotate_mode(30, 10, 20, dialog.txtName.Text);
+                        game.StartPosition = FormStartPosition.CenterScreen;
+                        game.Text = "My First Form";
+                        game.Width = 850;
+                        game.Height = 850;
+                        game.Visible = true;
+                    }
+                    this.Hide();
+                }
+                else
+                    this.Show();
+            }
         }
     }
 }

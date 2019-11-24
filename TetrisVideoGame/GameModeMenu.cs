@@ -127,7 +127,7 @@ namespace TetrisVideoGame
         }
         private void gameMode1_OnClick(object sender, EventArgs e)
         {
-            GameModeDetail gameModeDetail1 = new GameModeDetail();
+            GameModeDetail gameModeDetail1 = new GameModeDetail(1);
             gameModeDetail1.FormBorderStyle = FormBorderStyle.None;
             gameModeDetail1.StartPosition = FormStartPosition.CenterScreen;
             gameModeDetail1.BackgroundImage = Image.FromFile("mode1_detail.png");
@@ -136,7 +136,7 @@ namespace TetrisVideoGame
         }
         private void gameMode2_OnClick(object sender, EventArgs e)
         {
-            GameModeDetail gameModeDetail1 = new GameModeDetail();
+            GameModeDetail gameModeDetail1 = new GameModeDetail(2);
             gameModeDetail1.FormBorderStyle = FormBorderStyle.None;
             gameModeDetail1.StartPosition = FormStartPosition.CenterScreen;
             gameModeDetail1.BackgroundImage = Image.FromFile("mode2_detail.png");
@@ -145,7 +145,7 @@ namespace TetrisVideoGame
         }
         private void gameMode3_OnClick(object sender, EventArgs e)
         {
-            GameModeDetail gameModeDetail1 = new GameModeDetail();
+            GameModeDetail gameModeDetail1 = new GameModeDetail(3);
             gameModeDetail1.FormBorderStyle = FormBorderStyle.None;
             gameModeDetail1.StartPosition = FormStartPosition.CenterScreen;
             gameModeDetail1.BackgroundImage = Image.FromFile("mode3_detail.png");
@@ -154,7 +154,7 @@ namespace TetrisVideoGame
         }
         private void gameMode4_OnClick(object sender, EventArgs e)
         {
-            GameModeDetail gameModeDetail1 = new GameModeDetail();
+            GameModeDetail gameModeDetail1 = new GameModeDetail(4);
             gameModeDetail1.FormBorderStyle = FormBorderStyle.None;
             gameModeDetail1.StartPosition = FormStartPosition.CenterScreen;
             gameModeDetail1.BackgroundImage = Image.FromFile("mode4_detail.png");

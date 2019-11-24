@@ -219,7 +219,7 @@ namespace TetrisVideoGame
 			_playboard.RemoveShape(_tetromino);
 			int x = _tetromino.PositionX;
 			int y = _tetromino.PositionY;
-			_tetromino.changeRotation();
+            _tetromino.leftRotation();
 			if (_collisionDetector.CheckRotationCollision(_tetromino, _playboard))
 			{
 				_tetromino.changeBackRotation(x, y);

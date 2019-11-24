@@ -10,6 +10,7 @@ namespace TetrisVideoGame
     {
         private int game_mode = 0;
         private PictureBox PicBack;
+        private PictureBox PicHelp;
         private PictureBox PicStart;
 
         public GameModeDetail(int game_mode)
@@ -32,6 +33,17 @@ namespace TetrisVideoGame
             PicBack.Click += PicBack_OnClick;
             this.Controls.Add(PicBack);
 
+            PicHelp = new PictureBox();
+            PicHelp.Image = Image.FromFile("help.png");
+            PicHelp.SizeMode = PictureBoxSizeMode.StretchImage;
+            PicHelp.BackColor = Color.Transparent;
+            PicHelp.Width = 70;
+            PicHelp.Height = 70;
+            PicHelp.Left = 975;
+            PicHelp.Top = 18;
+            PicHelp.Click += PicHelp_OnClick;
+            this.Controls.Add(PicHelp);
+
             PicStart = new PictureBox();
             PicStart.Image = Image.FromFile("buttonStart.png");
             PicStart.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -53,6 +65,20 @@ namespace TetrisVideoGame
             {
                 forms.Show();
                 this.Dispose();
+            }
+        }
+        private void PicHelp_OnClick(object sender, EventArgs e)
+        {
+            HelpWindows dialog3 = new HelpWindows();
+            dialog3.BackColor = Color.FromArgb(240, 240, 240);
+            dialog3.StartPosition = FormStartPosition.CenterScreen;
+            dialog3.FormBorderStyle = FormBorderStyle.None;
+            dialog3.Name = "HelpDialog";
+            dialog3.Width = 830;
+            dialog3.Height = 600;
+            if (dialog3.ShowDialog() == DialogResult.OK)
+            {
+                dialog3.Dispose();
             }
         }
         private void PicStart_OnClick(object sender, EventArgs e)

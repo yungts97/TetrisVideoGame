@@ -9,3 +9,4 @@ C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Release\TetrisVi
 C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Release\TetrisVideoGame.csproj.CoreCompileInputs.cache
 C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Release\TetrisVideoGame.csproj.CopyComplete
 C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Release\TetrisVideoGame.exe
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Release\TetrisVideoGame.csprojAssemblyReference.cache

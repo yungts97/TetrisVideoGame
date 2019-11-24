@@ -325,240 +325,253 @@ namespace TetrisVideoGame
 		{
 			if (GameTimer.Enabled == true)
 			{
-				if (e.KeyCode == Keys.Left)
-				{
+                if (e.KeyCode == Keys.Left)
+                {
 
-					if (!_collisionDetector.CheckCollision(_tetromino, _playboard, -1, 0))
-					{
-						_playboard.RemoveShape(_tetromino); // remove the previous shape
-						_tetromino.MoveLeft();
-						_playboard.DrawShape(_tetromino); // draw a new shape
-						_playboard.DrawShadowGrids(this, _tetromino); // Shadow
-					}
-				}
-				else if (e.KeyCode == Keys.Right)
-				{
-					if (!_collisionDetector.CheckCollision(_tetromino, _playboard, 1, 0))
-					{
-						_playboard.RemoveShape(_tetromino);
-						_tetromino.MoveRight();
-						_playboard.DrawShape(_tetromino);
-						_playboard.DrawShadowGrids(this, _tetromino); // Shadow
-					}
-				}
-				else if (e.KeyCode == Keys.X)
-				{
-					_playboard.RemoveShape(_tetromino);
-					int x = _tetromino.PositionX;
-					int y = _tetromino.PositionY;
-					_tetromino.leftRotation();
-					if (_collisionDetector.CheckRotationCollision(_tetromino, _playboard))
-					{
-						_tetromino.changeBackRotation(x, y);
-					}
-					_playboard.DrawShape(_tetromino);
-					_playboard.DrawShadowGrids(this, _tetromino); // Shadow
+                    if (!_collisionDetector.CheckCollision(_tetromino, _playboard, -1, 0))
+                    {
+                        _playboard.RemoveShape(_tetromino); // remove the previous shape
+                        _tetromino.MoveLeft();
+                        _playboard.DrawShape(_tetromino); // draw a new shape
+                        _playboard.DrawShadowGrids(this, _tetromino); // Shadow
+                    }
+                }
+                else if (e.KeyCode == Keys.Right)
+                {
+                    if (!_collisionDetector.CheckCollision(_tetromino, _playboard, 1, 0))
+                    {
+                        _playboard.RemoveShape(_tetromino);
+                        _tetromino.MoveRight();
+                        _playboard.DrawShape(_tetromino);
+                        _playboard.DrawShadowGrids(this, _tetromino); // Shadow
+                    }
+                }
+                else if (e.KeyCode == Keys.X)
+                {
+                    _playboard.RemoveShape(_tetromino);
+                    int x = _tetromino.PositionX;
+                    int y = _tetromino.PositionY;
+                    _tetromino.leftRotation();
+                    if (_collisionDetector.CheckRotationCollision(_tetromino, _playboard))
+                    {
+                        _tetromino.changeBackRotation(x, y);
+                    }
+                    _playboard.DrawShape(_tetromino);
+                    _playboard.DrawShadowGrids(this, _tetromino); // Shadow
 
-				}
-				else if (e.KeyCode == Keys.Z)
-				{
-					_playboard.RemoveShape(_tetromino);
-					int x = _tetromino.PositionX;
-					int y = _tetromino.PositionY;
-					_tetromino.rightRotation();
-					if (_collisionDetector.CheckRotationCollision(_tetromino, _playboard))
-					{
-						_tetromino.changeBackRotation(x, y);
-					}
-					_playboard.DrawShape(_tetromino);
-					_playboard.DrawShadowGrids(this, _tetromino); // Shadow
+                }
+                else if (e.KeyCode == Keys.Z)
+                {
+                    _playboard.RemoveShape(_tetromino);
+                    int x = _tetromino.PositionX;
+                    int y = _tetromino.PositionY;
+                    _tetromino.rightRotation();
+                    if (_collisionDetector.CheckRotationCollision(_tetromino, _playboard))
+                    {
+                        _tetromino.changeBackRotation(x, y);
+                    }
+                    _playboard.DrawShape(_tetromino);
+                    _playboard.DrawShadowGrids(this, _tetromino); // Shadow
 
-				}
-				else if (e.KeyCode == Keys.Down)
-				{
-					if (_player.Level * 4 >= 45) // maximum drop speed
-						GameTimer.Interval = 15;
-					else
-						GameTimer.Interval = 60 - (_player.Level * 4);
-				}
-				else if (e.KeyCode == Keys.ShiftKey)
-				{
-					if (!_holdTetromino.Hold)
-					{
-						if (_holdTetromino.ShapeColor.IsEmpty) // this means the shape holder no holds any shape.
-						{
-							_holdTetromino = _tetromino;
-							_holdTetromino.Hold = true;
+                }
+                else if (e.KeyCode == Keys.Up)
+                {
+                    _playboard.RemoveShape(_tetromino);
+                    int x = _tetromino.PositionX;
+                    int y = _tetromino.PositionY;
+                    _tetromino.rightRotation();
+                    if (_collisionDetector.CheckRotationCollision(_tetromino, _playboard))
+                    {
+                        _tetromino.changeBackRotation(x, y);
+                    }
+                    _playboard.DrawShape(_tetromino);
+                    _playboard.DrawShadowGrids(this, _tetromino); // Shadow
+                }
+                else if (e.KeyCode == Keys.Down)
+                {
+                    if (_player.Level * 4 >= 45) // maximum drop speed
+                        GameTimer.Interval = 15;
+                    else
+                        GameTimer.Interval = 60 - (_player.Level * 4);
+                }
+                else if (e.KeyCode == Keys.ShiftKey)
+                {
+                    if (!_holdTetromino.Hold)
+                    {
+                        if (_holdTetromino.ShapeColor.IsEmpty) // this means the shape holder no holds any shape.
+                        {
+                            _holdTetromino = _tetromino;
+                            _holdTetromino.Hold = true;
 
-							//reset the attributes of holded shape
-							_holdTetromino.PositionX = 4;
-							_holdTetromino.PositionY = 0;
-							_holdTetromino.resetRotation();
-							_holdshapeboard.DrawHopeShape(_holdTetromino.TetromoniShape, _holdTetromino.ShapeColor);
+                            //reset the attributes of holded shape
+                            _holdTetromino.PositionX = 4;
+                            _holdTetromino.PositionY = 0;
+                            _holdTetromino.resetRotation();
+                            _holdshapeboard.DrawHopeShape(_holdTetromino.TetromoniShape, _holdTetromino.ShapeColor);
 
-							//assign current shape to next shape, next shape assign to new next shape
+                            //assign current shape to next shape, next shape assign to new next shape
 
-							_tetromino = _nextTetromino;
-							_nextTetromino = NextShape();
-							_playboard.DrawLandedBlocks();
-							_nextshapeboard.DrawNextShape(_nextTetromino.TetromoniShape, _nextTetromino.ShapeColor);
-						}
-						else
-						{
-							Tetromino temp = _holdTetromino;
-							_holdTetromino = _tetromino;
-							_tetromino = temp;
+                            _tetromino = _nextTetromino;
+                            _nextTetromino = NextShape();
+                            _playboard.DrawLandedBlocks();
+                            _nextshapeboard.DrawNextShape(_nextTetromino.TetromoniShape, _nextTetromino.ShapeColor);
+                        }
+                        else
+                        {
+                            Tetromino temp = _holdTetromino;
+                            _holdTetromino = _tetromino;
+                            _tetromino = temp;
 
-							_holdTetromino.Hold = true;
+                            _holdTetromino.Hold = true;
 
-							//reset the attributes of holded shape
-							_holdTetromino.PositionX = 4;
-							_holdTetromino.PositionY = 0;
-							_holdTetromino.resetRotation();
-							_holdshapeboard.DrawHopeShape(_holdTetromino.TetromoniShape, _holdTetromino.ShapeColor);
+                            //reset the attributes of holded shape
+                            _holdTetromino.PositionX = 4;
+                            _holdTetromino.PositionY = 0;
+                            _holdTetromino.resetRotation();
+                            _holdshapeboard.DrawHopeShape(_holdTetromino.TetromoniShape, _holdTetromino.ShapeColor);
 
-							//assign current shape to next shape, next shape assign to new next shape
+                            //assign current shape to next shape, next shape assign to new next shape
 
-							_playboard.DrawLandedBlocks();
-						}
-					}
+                            _playboard.DrawLandedBlocks();
+                        }
+                    }
 
-				}
-				else if (e.KeyCode == Keys.D1)
-				{
-					if (_player.ColourBombs.Quantity >= 1)
-					{
-						_player.ColourBombs.triggerBomb(_playboard.GridSigns); // check here
-						AddScore(2);
-						_playboard.DrawLandedBlocks();
-						if (_player.ColourBombs.Quantity == 0)
-						{
-							_colourbombboard.updateBombPicture(Color.Black);
-						}
-						else
-						{
-							_colourbombboard.updateBombPicture(_player.ColourBombs.Colors[0]);
-						}
-						_colourbombboard.updateQuantity(_player.ColourBombs.Quantity);
+                }
+                else if (e.KeyCode == Keys.D1)
+                {
+                    if (_player.ColourBombs.Quantity >= 1)
+                    {
+                        _player.ColourBombs.triggerBomb(_playboard.GridSigns); // check here
+                        AddScore(2);
+                        _playboard.DrawLandedBlocks();
+                        if (_player.ColourBombs.Quantity == 0)
+                        {
+                            _colourbombboard.updateBombPicture(Color.Black);
+                        }
+                        else
+                        {
+                            _colourbombboard.updateBombPicture(_player.ColourBombs.Colors[0]);
+                        }
+                        _colourbombboard.updateQuantity(_player.ColourBombs.Quantity);
 
-					}
-					else
-					{
-						_myBombMsgBox.UpdateMessage("You don't have any Colour Bomb!");
-						_myBombMsgBox.Opacity = 1;
-						BombMsgTimer.Enabled = true;
-					}
-				}
-				else if (e.KeyCode == Keys.D2)
-				{
-					if (_player.HorizontalBombs.Quantity >= 1)
-					{
-						AddScore(1);
-						_player.HorizontalBombs.triggerBomb(_playboard.GridSigns); // check here
-						_playboard.DrawLandedBlocks();
-						_horizontalbombboard.updateQuantity(_player.HorizontalBombs.Quantity);
-					}
-					else
-					{
-						_myBombMsgBox.UpdateMessage("You don't have any Horizontal Bomb!");
-						_myBombMsgBox.Opacity = 1;
-						BombMsgTimer.Enabled = true;
-					}
-				}
-				else if (e.KeyCode == Keys.D3)
-				{
-					if (_player.LargeBombs.Quantity >= 1)
-					{
-						AddScore(5);
-						_player.LargeBombs.triggerBomb(_playboard.GridSigns); // check here
-						_playboard.DrawLandedBlocks();
-						_largebombboard.updateQuantity(_player.LargeBombs.Quantity);
-					}
-					else
-					{
-						_myBombMsgBox.UpdateMessage("You don't have any Large Bomb!");
-						_myBombMsgBox.Opacity = 1;
-						BombMsgTimer.Enabled = true;
-					}
-				}
-				else if (e.KeyCode == Keys.Space)
-				{
-					//_playboard.RemoveShape(_tetromino);
-					_tetromino.PositionY += _collisionDetector.GetCollisionHeight(_tetromino, _playboard);
-					_playboard.RemoveShape(_tetromino);
-					_playboard.SaveIntoGrids(_tetromino);
-					CheckClearLine();
-					_playboard.DrawLandedBlocks();
-					_tetromino = _nextTetromino;
-					_nextTetromino = NextShape();
-					_nextshapeboard.DrawNextShape(_nextTetromino.TetromoniShape, _nextTetromino.ShapeColor);
-					_holdTetromino.Hold = false;
-					_playboard.DrawShape(_tetromino);
-					_playboard.DrawShadowGrids(this,_tetromino); // Shadow
-				}
-				else if (e.KeyCode == Keys.Escape)
-				{
-					GameTimer.Enabled = false;
-					while (true)
-					{
-						myPauseForm = new PauseMenuWindows();
-						myPauseForm.ShowInTaskbar = false;
-						myPauseForm.BackColor = Color.FromArgb(240, 240, 240);
-						myPauseForm.StartPosition = FormStartPosition.CenterScreen;
-						myPauseForm.FormBorderStyle = FormBorderStyle.None;
-						myPauseForm.Width = 300;
-						myPauseForm.Height = 270;
-						if (myPauseForm.ShowDialog() == DialogResult.OK)
-						{
-							GameTimer.Enabled = true;
-							myPauseForm.Dispose();
-							break;
-						}
-						else if (myPauseForm.DialogResult == DialogResult.No)
-						{
-							myHelpForm = new HelpWindows();
-							myHelpForm.BackColor = Color.FromArgb(240, 240, 240);
-							myHelpForm.StartPosition = FormStartPosition.CenterScreen;
-							myHelpForm.FormBorderStyle = FormBorderStyle.None;
-							myHelpForm.Name = "HelpDialog";
-							myHelpForm.Width = 830;
-							myHelpForm.Height = 600;
-							if (myHelpForm.ShowDialog() == DialogResult.OK)
-							{
-								myHelpForm.Dispose();
-							}
-						}
-						else
-						{
-							myConfirmForm = new ConfirmationWindows();
-							myConfirmForm.ShowInTaskbar = false;
-							myConfirmForm.BackColor = Color.FromArgb(240, 240, 240);
-							myConfirmForm.StartPosition = FormStartPosition.CenterScreen;
-							myConfirmForm.FormBorderStyle = FormBorderStyle.None;
-							myConfirmForm.Width = 350;
-							myConfirmForm.Height = 130;
-							if (myConfirmForm.ShowDialog() == DialogResult.OK)
-							{
-								BGMplayer.Stop();
-								var forms = Application.OpenForms.Cast<Form>().Where(x => x.Name == "MainScreen").FirstOrDefault();
-								if (forms != null)
-								{
-									forms.Show();
-									myPauseForm.Dispose();
-									myConfirmForm.Dispose();
-									this.Dispose();
-									break;
-								}
-							}
-							else
-							{
-								myConfirmForm.Dispose();
-							}
-						}
-				
-					}
+                    }
+                    else
+                    {
+                        _myBombMsgBox.UpdateMessage("You don't have any Colour Bomb!");
+                        _myBombMsgBox.Opacity = 1;
+                        BombMsgTimer.Enabled = true;
+                    }
+                }
+                else if (e.KeyCode == Keys.D2)
+                {
+                    if (_player.HorizontalBombs.Quantity >= 1)
+                    {
+                        AddScore(1);
+                        _player.HorizontalBombs.triggerBomb(_playboard.GridSigns); // check here
+                        _playboard.DrawLandedBlocks();
+                        _horizontalbombboard.updateQuantity(_player.HorizontalBombs.Quantity);
+                    }
+                    else
+                    {
+                        _myBombMsgBox.UpdateMessage("You don't have any Horizontal Bomb!");
+                        _myBombMsgBox.Opacity = 1;
+                        BombMsgTimer.Enabled = true;
+                    }
+                }
+                else if (e.KeyCode == Keys.D3)
+                {
+                    if (_player.LargeBombs.Quantity >= 1)
+                    {
+                        AddScore(5);
+                        _player.LargeBombs.triggerBomb(_playboard.GridSigns); // check here
+                        _playboard.DrawLandedBlocks();
+                        _largebombboard.updateQuantity(_player.LargeBombs.Quantity);
+                    }
+                    else
+                    {
+                        _myBombMsgBox.UpdateMessage("You don't have any Large Bomb!");
+                        _myBombMsgBox.Opacity = 1;
+                        BombMsgTimer.Enabled = true;
+                    }
+                }
+                else if (e.KeyCode == Keys.Space)
+                {
+                    //_playboard.RemoveShape(_tetromino);
+                    _tetromino.PositionY += _collisionDetector.GetCollisionHeight(_tetromino, _playboard);
+                    _playboard.RemoveShape(_tetromino);
+                    _playboard.SaveIntoGrids(_tetromino);
+                    CheckClearLine();
+                    _playboard.DrawLandedBlocks();
+                    _tetromino = _nextTetromino;
+                    _nextTetromino = NextShape();
+                    _nextshapeboard.DrawNextShape(_nextTetromino.TetromoniShape, _nextTetromino.ShapeColor);
+                    _holdTetromino.Hold = false;
+                    _playboard.DrawShape(_tetromino);
+                    _playboard.DrawShadowGrids(this, _tetromino); // Shadow
+                }
+                else if (e.KeyCode == Keys.Escape)
+                {
+                    GameTimer.Enabled = false;
+                    while (true)
+                    {
+                        myPauseForm = new PauseMenuWindows();
+                        myPauseForm.ShowInTaskbar = false;
+                        myPauseForm.BackColor = Color.FromArgb(240, 240, 240);
+                        myPauseForm.StartPosition = FormStartPosition.CenterScreen;
+                        myPauseForm.FormBorderStyle = FormBorderStyle.None;
+                        myPauseForm.Width = 300;
+                        myPauseForm.Height = 270;
+                        if (myPauseForm.ShowDialog() == DialogResult.OK)
+                        {
+                            GameTimer.Enabled = true;
+                            myPauseForm.Dispose();
+                            break;
+                        }
+                        else if (myPauseForm.DialogResult == DialogResult.No)
+                        {
+                            myHelpForm = new HelpWindows();
+                            myHelpForm.BackColor = Color.FromArgb(240, 240, 240);
+                            myHelpForm.StartPosition = FormStartPosition.CenterScreen;
+                            myHelpForm.FormBorderStyle = FormBorderStyle.None;
+                            myHelpForm.Name = "HelpDialog";
+                            myHelpForm.Width = 830;
+                            myHelpForm.Height = 600;
+                            if (myHelpForm.ShowDialog() == DialogResult.OK)
+                            {
+                                myHelpForm.Dispose();
+                            }
+                        }
+                        else
+                        {
+                            myConfirmForm = new ConfirmationWindows();
+                            myConfirmForm.ShowInTaskbar = false;
+                            myConfirmForm.BackColor = Color.FromArgb(240, 240, 240);
+                            myConfirmForm.StartPosition = FormStartPosition.CenterScreen;
+                            myConfirmForm.FormBorderStyle = FormBorderStyle.None;
+                            myConfirmForm.Width = 350;
+                            myConfirmForm.Height = 130;
+                            if (myConfirmForm.ShowDialog() == DialogResult.OK)
+                            {
+                                BGMplayer.Stop();
+                                var forms = Application.OpenForms.Cast<Form>().Where(x => x.Name == "MainScreen").FirstOrDefault();
+                                if (forms != null)
+                                {
+                                    forms.Show();
+                                    myPauseForm.Dispose();
+                                    myConfirmForm.Dispose();
+                                    this.Dispose();
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                myConfirmForm.Dispose();
+                            }
+                        }
 
-				}
+                    }
+
+                }
 			}
 		}
 

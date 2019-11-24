@@ -62,3 +62,5 @@ C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisV
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.pdb
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojResolveAssemblyReference.cache
 C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojAssemblyReference.cache
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.Resource1.resources
+C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csproj.GenerateResource.cache

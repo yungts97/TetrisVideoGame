@@ -14,6 +14,7 @@ namespace TetrisVideoGame
 		private Button btnExit;
 		private PictureBox logo;
         private PictureBox pointer;
+        private GameModeMenu gameModeMenu;
 		private TetrisGame game;
 		private PlayerNameWindows dialog;
 		private HighScoreWindows dialog2;
@@ -21,9 +22,9 @@ namespace TetrisVideoGame
 
 		public MainWindows()
 		{
-			this.MaximumSize = new Size(850,850);
+			this.MaximumSize = new Size(850,713);
             this.Width = 850;
-            this.Height = 850;
+            this.Height = 713;
 
             logo = new PictureBox();
 			logo.Image = Image.FromFile("logo1.png");
@@ -32,7 +33,7 @@ namespace TetrisVideoGame
 			logo.Height = 100;
 			logo.Visible = true;
 			logo.Left = 215;
-			logo.Top = 100;
+			logo.Top = 50;
 			this.Controls.Add(logo);
 
             btnStart = new Button();
@@ -45,7 +46,7 @@ namespace TetrisVideoGame
 			btnStart.Width = 300;
 			btnStart.Height = 60;
 			btnStart.Left = 275;
-			btnStart.Top = 280;
+			btnStart.Top = 220;
 			btnStart.DialogResult = DialogResult.OK;
 			btnStart.Click += this.Btn_Start;
             btnStart.MouseMove += this.btnStart_MouseMove;
@@ -60,7 +61,7 @@ namespace TetrisVideoGame
 			btnHighScore.Width = 300;
 			btnHighScore.Height = 60;
 			btnHighScore.Left = 275;
-			btnHighScore.Top = 370;
+			btnHighScore.Top = 310;
 			btnHighScore.Click += this.Btn_HighScore;
             btnHighScore.MouseMove += this.btnHighScore_MouseMove;
             this.Controls.Add(btnHighScore);
@@ -74,7 +75,7 @@ namespace TetrisVideoGame
 			btnHelp.Width = 300;
 			btnHelp.Height = 60;
 			btnHelp.Left = 275;
-			btnHelp.Top = 460;
+			btnHelp.Top = 400;
 			btnHelp.Click += this.Btn_Help;
             btnHelp.MouseMove += this.btnHelp_MouseMove;
             this.Controls.Add(btnHelp);
@@ -88,7 +89,7 @@ namespace TetrisVideoGame
             btnSetting.Width = 300;
             btnSetting.Height = 60;
             btnSetting.Left = 275;
-            btnSetting.Top = 550;
+            btnSetting.Top = 490;
             btnSetting.Click += Btn_Setting;
             btnSetting.MouseMove += this.btnSetting_MouseMove;
             this.Controls.Add(btnSetting);
@@ -102,7 +103,7 @@ namespace TetrisVideoGame
 			btnExit.Width = 300;
 			btnExit.Height = 60;
 			btnExit.Left = 275;
-			btnExit.Top = 640;
+			btnExit.Top = 580;
 			btnExit.Click += Btn_Exit;
             btnExit.MouseMove += this.btnExit_MouseMove;
             this.Controls.Add(btnExit);
@@ -114,35 +115,40 @@ namespace TetrisVideoGame
             pointer.Height = 35;
             pointer.Visible = true;
             pointer.Left = 200;
-            pointer.Top = 290;
+            pointer.Top = 230;
             this.Controls.Add(pointer);
 
         }
 
         private void btnStart_MouseMove(object sender, EventArgs e)
         {
-            pointer.Top = 290;
+            pointer.Top = 230;
         }
         private void btnHighScore_MouseMove(object sender, EventArgs e)
         {
-            pointer.Top = 380;
+            pointer.Top = 320;
         }
         private void btnHelp_MouseMove(object sender, EventArgs e)
         {
-            pointer.Top = 470;
+            pointer.Top = 410;
         }
         private void btnSetting_MouseMove(object sender, EventArgs e)
         {
-            pointer.Top = 560;
+            pointer.Top = 500;
         }
         private void btnExit_MouseMove(object sender, EventArgs e)
         {
-            pointer.Top = 650;
+            pointer.Top = 590;
         }
         private void Btn_Start(object sender, EventArgs e)
 		{
-			
-			dialog = new PlayerNameWindows();
+            gameModeMenu = new GameModeMenu();
+           
+            gameModeMenu.StartPosition = FormStartPosition.CenterScreen;
+            gameModeMenu.FormBorderStyle = FormBorderStyle.None;
+            this.Hide();
+            gameModeMenu.ShowDialog();
+            /*dialog = new PlayerNameWindows();
 			dialog.BackColor = Color.FromArgb(240, 240, 240);
 			dialog.StartPosition = FormStartPosition.CenterScreen;
 			dialog.FormBorderStyle = FormBorderStyle.None;
@@ -166,8 +172,8 @@ namespace TetrisVideoGame
 				this.Hide();
 			}
             else
-                this.Show();
-		}
+                this.Show();*/
+        }
 		private void Btn_HighScore(object sender, EventArgs e)
 		{
 			dialog2 = new HighScoreWindows();

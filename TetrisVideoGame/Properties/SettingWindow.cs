@@ -11,12 +11,14 @@ namespace TetrisVideoGame
 		private Button btnChangeBgi;
 		private Button btnOk;
 		private Button btnMute;
-		private PictureBox picturebox1;
+		string[] images = System.IO.Directory.GetFiles("C:\\Users\\Ballo\\Documents\\GitHub\\TetrisVideoGame\\TetrisVideoGame\\bin\\Debug\\image", "*.jpg");
+		private int i = 0;
+
 
 		public SettingWindow()
 		{
 			this.MaximumSize = new Size(420, 680);
-			this.BackgroundImage = Image.FromFile("background_1.jpg");
+			this.BackgroundImage = Image.FromFile("image/background_1.jpg");
 			this.ShowInTaskbar = false;
 
 
@@ -43,7 +45,7 @@ namespace TetrisVideoGame
 			btnChangeBgi.Height = 40;
 			btnChangeBgi.Left = 130;
 			btnChangeBgi.Top = 160;
-
+			btnChangeBgi.Click += this.BtnChangeBgi;
 			this.Controls.Add(btnChangeBgi);
 
 			btnMute = new Button();
@@ -72,12 +74,20 @@ namespace TetrisVideoGame
 			btnOk.Top = 630;
 			btnOk.DialogResult = DialogResult.OK;
 			this.Controls.Add(btnOk);
-
-		
-
-
 	}
+		public void BtnChangeBgi(object sender, EventArgs e)
+		{
 
+			if (images.Length == 0)
+				return;
+
+			var image = Image.FromFile(images[i]);
+			this.BackgroundImage = image;
+			if (++i >= images.Length) i = 0;
+
+			//this.BackgroundImage = Image.FromFile("image/background_2.jpg");
+
+		}
 
 	}
 }

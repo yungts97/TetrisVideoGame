@@ -10,9 +10,11 @@ namespace TetrisVideoGame
 		private Button btnStart;
 		private Button btnHighScore;
 		private Button btnHelp;
+        private Button btnSetting;
 		private Button btnExit;
 		private PictureBox logo;
-		private Label title;
+        private PictureBox pointer;
+        private GameModeMenu gameModeMenu;
 		private TetrisGame game;
 		private PlayerNameWindows dialog;
 		private HighScoreWindows dialog2;
@@ -20,93 +22,141 @@ namespace TetrisVideoGame
 
 		public MainWindows()
 		{
-			//this.BackgroundImage = Image.FromFile("tetris.jpg");
-			this.MaximumSize = new Size(420,680);
-			title = new Label();
-			title.Text = "Tetris Game";
-			title.BackColor = Color.Transparent;
-			title.Visible = true;
-			title.ForeColor = Color.FromArgb(64, 64, 64);
-			title.Font = new Font("Arial", 25, FontStyle.Bold);
-			title.BringToFront();
-			title.AutoSize = true;
-			title.Left = 105;
-			title.Top = 70;
-			this.Controls.Add(title);
+			this.MaximumSize = new Size(850,713);
+            this.Width = 850;
+            this.Height = 713;
 
-			logo = new PictureBox();
-			logo.Image = Image.FromFile("logo.png");
+            logo = new PictureBox();
+			logo.Image = Image.FromFile("logo1.png");
 			logo.SizeMode = PictureBoxSizeMode.StretchImage;
-			logo.Width = 110;
-			logo.Height = 80;
+			logo.Width = 420;
+			logo.Height = 100;
 			logo.Visible = true;
-			logo.Left = 155;
-			logo.Top = 150;
+			logo.Left = 215;
+			logo.Top = 50;
 			this.Controls.Add(logo);
 
-
-			btnStart = new Button();
+            btnStart = new Button();
 			btnStart.Text = "Start";
 			btnStart.FlatStyle = FlatStyle.Flat;
 			btnStart.BackColor = Color.FromArgb(64, 64, 64);
 			btnStart.Font = new Font("Arial", 15, FontStyle.Regular);
 			btnStart.ForeColor = Color.White;
 			btnStart.AutoSize = true;
-			btnStart.Width = 220;
+			btnStart.Width = 300;
 			btnStart.Height = 60;
-			btnStart.Left = 100;
-			btnStart.Top = 280;
+			btnStart.Left = 275;
+			btnStart.Top = 220;
 			btnStart.DialogResult = DialogResult.OK;
 			btnStart.Click += this.Btn_Start;
-			this.Controls.Add(btnStart);
+            btnStart.MouseMove += this.btnStart_MouseMove;
+            this.Controls.Add(btnStart);
 
 			btnHighScore = new Button();
 			btnHighScore.Text = "High Score";
 			btnHighScore.FlatStyle = FlatStyle.Flat;
 			btnHighScore.Font = new Font("Arial", 15, FontStyle.Regular);
-			btnHighScore.AutoSize = true;
-			btnHighScore.Width = 220;
+            btnHighScore.ForeColor = Color.White;
+            btnHighScore.AutoSize = true;
+			btnHighScore.Width = 300;
 			btnHighScore.Height = 60;
-			btnHighScore.Left = 100;
-			btnHighScore.Top = 370;
+			btnHighScore.Left = 275;
+			btnHighScore.Top = 310;
 			btnHighScore.Click += this.Btn_HighScore;
-			this.Controls.Add(btnHighScore);
+            btnHighScore.MouseMove += this.btnHighScore_MouseMove;
+            this.Controls.Add(btnHighScore);
 
 			btnHelp = new Button();
 			btnHelp.Text = "Help";
 			btnHelp.FlatStyle = FlatStyle.Flat;
 			btnHelp.Font = new Font("Arial", 15, FontStyle.Regular);
-			btnHelp.AutoSize = true;
-			btnHelp.Width = 220;
+            btnHelp.ForeColor = Color.White;
+            btnHelp.AutoSize = true;
+			btnHelp.Width = 300;
 			btnHelp.Height = 60;
-			btnHelp.Left = 100;
-			btnHelp.Top = 460;
+			btnHelp.Left = 275;
+			btnHelp.Top = 400;
 			btnHelp.Click += this.Btn_Help;
-			this.Controls.Add(btnHelp);
+            btnHelp.MouseMove += this.btnHelp_MouseMove;
+            this.Controls.Add(btnHelp);
 
-			btnExit = new Button();
+            btnSetting = new Button();
+            btnSetting.Text = "Setting";
+            btnSetting.FlatStyle = FlatStyle.Flat;
+            btnSetting.Font = new Font("Arial", 15, FontStyle.Regular);
+            btnSetting.ForeColor = Color.White;
+            btnSetting.AutoSize = true;
+            btnSetting.Width = 300;
+            btnSetting.Height = 60;
+            btnSetting.Left = 275;
+            btnSetting.Top = 490;
+            btnSetting.Click += Btn_Setting;
+            btnSetting.MouseMove += this.btnSetting_MouseMove;
+            this.Controls.Add(btnSetting);
+
+            btnExit = new Button();
 			btnExit.Text = "Exit";
 			btnExit.FlatStyle = FlatStyle.Flat;
 			btnExit.Font = new Font("Arial", 15, FontStyle.Regular);
-			btnExit.AutoSize = true;
-			btnExit.Width = 220;
+            btnExit.ForeColor = Color.White;
+            btnExit.AutoSize = true;
+			btnExit.Width = 300;
 			btnExit.Height = 60;
-			btnExit.Left = 100;
-			btnExit.Top = 550;
+			btnExit.Left = 275;
+			btnExit.Top = 580;
 			btnExit.Click += Btn_Exit;
-			this.Controls.Add(btnExit);
-		}
-		private void Btn_Start(object sender, EventArgs e)
+            btnExit.MouseMove += this.btnExit_MouseMove;
+            this.Controls.Add(btnExit);
+
+            pointer = new PictureBox();
+            pointer.Image = Image.FromFile("pointer.png");
+            pointer.SizeMode = PictureBoxSizeMode.StretchImage;
+            pointer.Width = 60;
+            pointer.Height = 35;
+            pointer.Visible = true;
+            pointer.Left = 200;
+            pointer.Top = 230;
+            this.Controls.Add(pointer);
+
+        }
+
+        private void btnStart_MouseMove(object sender, EventArgs e)
+        {
+            pointer.Top = 230;
+        }
+        private void btnHighScore_MouseMove(object sender, EventArgs e)
+        {
+            pointer.Top = 320;
+        }
+        private void btnHelp_MouseMove(object sender, EventArgs e)
+        {
+            pointer.Top = 410;
+        }
+        private void btnSetting_MouseMove(object sender, EventArgs e)
+        {
+            pointer.Top = 500;
+        }
+        private void btnExit_MouseMove(object sender, EventArgs e)
+        {
+            pointer.Top = 590;
+        }
+        private void Btn_Start(object sender, EventArgs e)
 		{
-			
-			dialog = new PlayerNameWindows();
+            gameModeMenu = new GameModeMenu();
+           
+            gameModeMenu.StartPosition = FormStartPosition.CenterScreen;
+            gameModeMenu.FormBorderStyle = FormBorderStyle.None;
+            this.Hide();
+            gameModeMenu.ShowDialog();
+            /*dialog = new PlayerNameWindows();
 			dialog.BackColor = Color.FromArgb(240, 240, 240);
 			dialog.StartPosition = FormStartPosition.CenterScreen;
 			dialog.FormBorderStyle = FormBorderStyle.None;
 			dialog.Name = "PlayerDialog";
 			dialog.Width = 350;
 			dialog.Height = 250;
-			dialog.ShowDialog();
+            this.Hide();
+            dialog.ShowDialog();
 			if (!dialog.Visible && dialog.flag)
 			{
 				if (dialog.txtName.Text != "" || dialog.txtName.Text != null)
@@ -121,7 +171,9 @@ namespace TetrisVideoGame
 				}
 				this.Hide();
 			}
-		}
+            else
+                this.Show();*/
+        }
 		private void Btn_HighScore(object sender, EventArgs e)
 		{
 			dialog2 = new HighScoreWindows();
@@ -151,12 +203,26 @@ namespace TetrisVideoGame
 			}
 		}
 
-		private void Btn_Exit(object sender, EventArgs e)
+        private void Btn_Setting(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void Btn_Exit(object sender, EventArgs e)
 		{
 			this.Dispose();
 		}
-		#region windows shadow effect
-		private const int WM_NCHITTEST = 0x84;
+
+        private bool MouseIsOverControl(Button btn)
+        {
+            if (btn.ClientRectangle.Contains(btn.PointToClient(Cursor.Position)))
+            {
+                return true;
+            }
+            return false;
+        }
+        #region windows shadow effect
+        private const int WM_NCHITTEST = 0x84;
 		private const int HTCLIENT = 0x1;
 		private const int HTCAPTION = 0x2;
 

@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace TetrisVideoGame
 {
-	public class PlayerNameWindows: Form
+    public class PlayerNameWindows: Form
 	{
 		private Label message;
 		public TextBox txtName;

@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{279C69B3-AE8A-416C-B137-53237D5DF908}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TetrisVideoGame/HighScoreWindows.cs">
+    <Files>
+      <File FileName="TetrisVideoGame/HighScoreWindows.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TetrisVideoGame" expanded="True">
+            <Node name="TetrisVideoGame" expanded="True">
+              <Node name="HighScoreWindows.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="TetrisVideoGame" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="TetrisVideoGame\HighScoreWindows.cs" line="127" offsetX="277" offsetY="2016" expression="l.Text" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.ItemProperties.TetrisVideoGame PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="D:\TetrisVideoGame\TetrisVideoGame\PlayFieldBoard.cs" line="135" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

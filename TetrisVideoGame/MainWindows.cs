@@ -29,6 +29,7 @@ namespace TetrisVideoGame
             logo = new PictureBox();
 			logo.Image = Image.FromFile("logo1.png");
 			logo.SizeMode = PictureBoxSizeMode.StretchImage;
+            logo.BackColor = Color.Transparent;
 			logo.Width = 420;
 			logo.Height = 100;
 			logo.Visible = true;
@@ -55,7 +56,8 @@ namespace TetrisVideoGame
 			btnHighScore = new Button();
 			btnHighScore.Text = "High Score";
 			btnHighScore.FlatStyle = FlatStyle.Flat;
-			btnHighScore.Font = new Font("Arial", 15, FontStyle.Regular);
+            btnHighScore.BackColor = Color.FromArgb(64, 64, 64);
+            btnHighScore.Font = new Font("Arial", 15, FontStyle.Regular);
             btnHighScore.ForeColor = Color.White;
             btnHighScore.AutoSize = true;
 			btnHighScore.Width = 300;
@@ -69,7 +71,8 @@ namespace TetrisVideoGame
 			btnHelp = new Button();
 			btnHelp.Text = "Help";
 			btnHelp.FlatStyle = FlatStyle.Flat;
-			btnHelp.Font = new Font("Arial", 15, FontStyle.Regular);
+            btnHelp.BackColor = Color.FromArgb(64, 64, 64);
+            btnHelp.Font = new Font("Arial", 15, FontStyle.Regular);
             btnHelp.ForeColor = Color.White;
             btnHelp.AutoSize = true;
 			btnHelp.Width = 300;
@@ -83,6 +86,7 @@ namespace TetrisVideoGame
             btnSetting = new Button();
             btnSetting.Text = "Setting";
             btnSetting.FlatStyle = FlatStyle.Flat;
+            btnSetting.BackColor = Color.FromArgb(64, 64, 64);
             btnSetting.Font = new Font("Arial", 15, FontStyle.Regular);
             btnSetting.ForeColor = Color.White;
             btnSetting.AutoSize = true;
@@ -97,7 +101,8 @@ namespace TetrisVideoGame
             btnExit = new Button();
 			btnExit.Text = "Exit";
 			btnExit.FlatStyle = FlatStyle.Flat;
-			btnExit.Font = new Font("Arial", 15, FontStyle.Regular);
+            btnExit.BackColor = Color.FromArgb(64, 64, 64);
+            btnExit.Font = new Font("Arial", 15, FontStyle.Regular);
             btnExit.ForeColor = Color.White;
             btnExit.AutoSize = true;
 			btnExit.Width = 300;
@@ -111,6 +116,7 @@ namespace TetrisVideoGame
             pointer = new PictureBox();
             pointer.Image = Image.FromFile("pointer.png");
             pointer.SizeMode = PictureBoxSizeMode.StretchImage;
+            pointer.BackColor = Color.Transparent;
             pointer.Width = 60;
             pointer.Height = 35;
             pointer.Visible = true;

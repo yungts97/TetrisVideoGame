@@ -13,7 +13,8 @@ namespace TetrisVideoGame
 			windows.FormBorderStyle = FormBorderStyle.None;
 			windows.Text = "Main Screen";
 			windows.Name = "MainScreen";
-            windows.BackColor = Color.FromArgb(51, 50, 50);
+            windows.BackgroundImage = Image.FromFile("bg.png");
+            windows.BackgroundImageLayout = ImageLayout.Stretch;
             windows.Visible = true;
 			Application.Run(windows);
 		}

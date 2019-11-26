@@ -103,6 +103,8 @@ namespace TetrisVideoGame
 			//mylist.Location = new Point(50, 83);
 			//mylist.Size = new Size(535, 300);
 
+
+			//continue to tweak highscore view
 			int left = 50;
 			int top = 83;
 

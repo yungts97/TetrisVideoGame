@@ -112,33 +112,33 @@ namespace TetrisVideoGame
 			List<Player> players = recorder.RetrieveData();
 			var descPlayers = players.OrderByDescending(p => p.Score); // descending order
 			int i = 1;
-			int x = 0;
+			int y = 0;
 
 
 			Label[,] scoreview = new Label[descPlayers.Count(), 5];
 
 			foreach (Player p in descPlayers)
 			{
-				int y = 0;
+				int x = 0;
 				string[] row = { i.ToString(), p.Name, p.Level.ToString(), p.ClearedLines.ToString(), p.Score.ToString() };
 
 				foreach (String s in row)
 				{
 					Label l = new Label();
-					scoreview[x, y] = l;
-					l.Text = row[y].ToString();
+					scoreview[y, x] = l;
+					l.Text = row[x];
 					l.Left = left;
 					l.Top = top;
 					l.Width = 100;
 					l.Height = 30;
 
-					l.Location = new Point(left + x * l.Width, top + y * l.Height);
+					l.Location = new Point(left + y * l.Width, top + x * l.Height);
 
-					this.Controls.Add(scoreview[x, y]);
-					y++;
+					this.Controls.Add(scoreview[y, x]);
+					x++;
 				}
 				++i;
-				x++;
+				y++;
 			}
 
 			/*

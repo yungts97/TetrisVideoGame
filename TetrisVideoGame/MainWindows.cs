@@ -196,7 +196,7 @@ namespace TetrisVideoGame
 			dialog3.FormBorderStyle = FormBorderStyle.None;
 			dialog3.Name = "HelpDialog";
 			dialog3.Width = 830;
-			dialog3.Height = 600;
+			dialog3.Height = 650;
 			if (dialog3.ShowDialog() == DialogResult.OK)
 			{
 				dialog3.Dispose();

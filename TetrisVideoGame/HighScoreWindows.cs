@@ -9,6 +9,7 @@ namespace TetrisVideoGame
 	public class HighScoreWindows:Form
 	{
 		private Label title;
+		private PictureBox titleBox;
 
 		/*
 		private ListView mylist;
@@ -25,9 +26,23 @@ namespace TetrisVideoGame
 		public HighScoreWindows()
 		{
 			this.MaximumSize = new Size(630, 450);
+			this.BackgroundImage = Image.FromFile("bg.png");
+			this.BackgroundImageLayout = ImageLayout.Stretch;
+			this.Width = 630;
+			this.Height = 450;
 			this.ShowInTaskbar = false;
 			recorder = new DataRecorder();
 
+			titleBox = new PictureBox();
+			titleBox.Image = Image.FromFile("Player_High_Score_Board.png");
+			titleBox.SizeMode = PictureBoxSizeMode.StretchImage;
+			titleBox.BackColor = Color.Transparent;
+			titleBox.Top = 23;
+			titleBox.Left = 128;
+			titleBox.Width = 374;
+			titleBox.Height = 43;
+			this.Controls.Add(titleBox);
+			/*
 			title = new Label();
 			title.Text = "Player High Score Board";
 			title.BackColor = Color.Transparent;
@@ -39,6 +54,7 @@ namespace TetrisVideoGame
 			title.Left = 48;
 			title.Top = 35;
 			this.Controls.Add(title);
+			*/
 
 			btnOk = new Button();
 			btnOk.Text = "Ok";
@@ -106,39 +122,54 @@ namespace TetrisVideoGame
 
 			//continue to tweak highscore view
 			int left = 50;
-			int top = 83;
+			int top = 90;
 
 
 			List<Player> players = recorder.RetrieveData();
 			var descPlayers = players.OrderByDescending(p => p.Score); // descending order
-			int i = 1;
-			int x = 0;
+			int i = 0;
+			int y = 0;
 
 
 			Label[,] scoreview = new Label[descPlayers.Count(), 5];
 
 			foreach (Player p in descPlayers)
 			{
-				int y = 0;
+				int x = 0;
+				string[] heading = { "No", "Name", "Level","Lines", "Scores" };
 				string[] row = { i.ToString(), p.Name, p.Level.ToString(), p.ClearedLines.ToString(), p.Score.ToString() };
 
 				foreach (String s in row)
 				{
 					Label l = new Label();
-					scoreview[x, y] = l;
-					l.Text = row[y].ToString();
+					scoreview[y, x] = l;
+					if (y == 0)
+					{
+						l.Text = heading[x];
+						l.Font = new Font("Arial", 12, FontStyle.Bold);
+					}
+					else 
+					{
+						l.Text = row[x];
+					}
+					l.ForeColor = Color.White;
+					l.BackColor = Color.Transparent;
 					l.Left = left;
 					l.Top = top;
-					l.Width = 100;
+					l.Width = 120;
 					l.Height = 30;
 
 					l.Location = new Point(left + x * l.Width, top + y * l.Height);
 
-					this.Controls.Add(scoreview[x, y]);
-					y++;
+					this.Controls.Add(scoreview[y, x]);
+					x++;
 				}
 				++i;
-				x++;
+				y++;
+				if (y >= 10)
+				{
+					break;
+				}
 			}
 
 			/*

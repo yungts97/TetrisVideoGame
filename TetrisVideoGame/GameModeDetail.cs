@@ -75,7 +75,7 @@ namespace TetrisVideoGame
             dialog3.FormBorderStyle = FormBorderStyle.None;
             dialog3.Name = "HelpDialog";
             dialog3.Width = 830;
-            dialog3.Height = 600;
+            dialog3.Height = 650;
             if (dialog3.ShowDialog() == DialogResult.OK)
             {
                 dialog3.Dispose();
@@ -92,7 +92,6 @@ namespace TetrisVideoGame
                 dialog.Name = "PlayerDialog";
                 dialog.Width = 350;
                 dialog.Height = 250;
-                this.Hide();
                 dialog.ShowDialog();
                 if (!dialog.Visible && dialog.flag)
                 {
@@ -104,6 +103,7 @@ namespace TetrisVideoGame
                         game.Text = "My First Form";
                         game.Width = 850;
                         game.Height = 850;
+                        game.BackgroundImage = Image.FromFile("bg.png");
                         game.Visible = true;
                     }
                     this.Hide();
@@ -120,7 +120,6 @@ namespace TetrisVideoGame
                 dialog.Name = "PlayerDialog";
                 dialog.Width = 350;
                 dialog.Height = 250;
-                this.Hide();
                 dialog.ShowDialog();
                 if (!dialog.Visible && dialog.flag)
                 {

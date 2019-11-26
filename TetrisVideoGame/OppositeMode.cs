@@ -535,7 +535,7 @@ namespace TetrisVideoGame
 							myHelpForm.FormBorderStyle = FormBorderStyle.None;
 							myHelpForm.Name = "HelpDialog";
 							myHelpForm.Width = 830;
-							myHelpForm.Height = 600;
+							myHelpForm.Height = 650;
 							if (myHelpForm.ShowDialog() == DialogResult.OK)
 							{
 								myHelpForm.Dispose();

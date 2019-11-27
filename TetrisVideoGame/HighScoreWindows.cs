@@ -127,7 +127,7 @@ namespace TetrisVideoGame
 
 			List<Player> players = recorder.RetrieveData();
 			var descPlayers = players.OrderByDescending(p => p.Score); // descending order
-			int i = 1;
+			int i = 0;
 			int y = 0;
 
 
@@ -139,7 +139,7 @@ namespace TetrisVideoGame
 				string[] heading = { "No", "Name", "Level","Lines", "Scores" };
 				string[] row = { i.ToString(), p.Name, p.Level.ToString(), p.ClearedLines.ToString(), p.Score.ToString() };
 
-				foreach (String s in row)
+				foreach (string s in row)
 				{
 					Label l = new Label();
 					scoreview[y, x] = l;
@@ -159,7 +159,7 @@ namespace TetrisVideoGame
 					l.Width = 120;
 					l.Height = 30;
 
-					l.Location = new Point(left + y * l.Width, top + x * l.Height);
+					l.Location = new Point(left + x * l.Width, top + y * l.Height);
 
 					this.Controls.Add(scoreview[y, x]);
 					x++;

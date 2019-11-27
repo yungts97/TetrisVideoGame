@@ -12,7 +12,7 @@
     <Files>
       <File FileName="TetrisVideoGame\PlayFieldBoard.cs" Line="129" Column="4" />
       <File FileName="TetrisVideoGame\TetrisGame.cs" Line="510" Column="41" />
-      <File FileName="TetrisVideoGame\Properties\SettingWindow.cs" Line="109" Column="2" />
+      <File FileName="TetrisVideoGame\Properties\SettingWindow.cs" Line="16" Column="143" />
       <File FileName="TetrisVideoGame\Properties\GlobalVariable.cs" Line="1" Column="1" />
       <File FileName="TetrisVideoGame\Tetromino.cs" Line="41" Column="42" />
       <File FileName="TetrisVideoGame\HelpWindows.cs" Line="20" Column="19" />

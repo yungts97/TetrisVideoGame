@@ -64,6 +64,7 @@
     <Compile Include="LargeBombUnitTest.cs" />
     <Compile Include="Properties\SettingWindow.cs" />
     <Compile Include="Properties\GlobalVariable.cs" />
+    <Compile Include="Properties\MuteTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />

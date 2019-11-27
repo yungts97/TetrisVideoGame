@@ -99,8 +99,12 @@ namespace TetrisVideoGame
 		}
 		public void BtnMute(object sender, EventArgs e)
 		{
+			mute();
+			//Console.WriteLine(GlobalVariable.mute.ToString());
+		}
+		public static void mute()
+		{ 
 			GlobalVariable.mute = !(GlobalVariable.mute);
-			Console.WriteLine(GlobalVariable.mute.ToString());
 		}
 
 	}

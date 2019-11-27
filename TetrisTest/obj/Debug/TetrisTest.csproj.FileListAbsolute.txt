@@ -23,3 +23,7 @@ C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisTest\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisTest\obj\Debug\TetrisTest.csproj.CopyComplete
 C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisTest\obj\Debug\TetrisTest.dll
 C:\Users\Yungts\Desktop\TetrisVideoGame\TetrisTest\obj\Debug\TetrisTest.pdb
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisTest\obj\Debug\TetrisTest.csprojAssemblyReference.cache
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisTest\obj\Debug\TetrisTest.csproj.CoreCompileInputs.cache
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisTest\obj\Debug\TetrisTest.dll
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisTest\obj\Debug\TetrisTest.pdb

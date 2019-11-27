@@ -13,7 +13,7 @@ namespace TetrisVideoGame
 		private Button btnOk;
 		private Button btnMute;
 		//private SoundPlayer bgmplayer;
-		string[] images = System.IO.Directory.GetFiles("C:\\Users\\101222274\\Documents\\GitHub\\TetrisVideoGame\\TetrisVideoGame\\bin\\Debug\\image", "*.jpg");
+		string[] images = System.IO.Directory.GetFiles("C:\\Users\\Ballo\\Documents\\GitHub\\TetrisVideoGame\\TetrisVideoGame\\bin\\Debug\\image", "*.jpg");
 		private int i = 0;
 
 		public SettingWindow()

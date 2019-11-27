@@ -61,7 +61,6 @@ C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\bin\Debug\normnfkd.nl
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.exe
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.pdb
 C:\Users\101222148\Desktop\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojResolveAssemblyReference.cache
-C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojResolveAssemblyReference.cache
 C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.exe
 C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.pdb
 C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\bin\Debug\TetrisVideoGame.exe
@@ -87,3 +86,6 @@ C:\Users\101222274\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\bin\Debug\no
 C:\Users\101222274\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojResolveAssemblyReference.cache
 C:\Users\101222274\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.exe
 C:\Users\101222274\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.pdb
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csprojAssemblyReference.cache
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csproj.CoreCompileInputs.cache
+C:\Users\Ballo\Documents\GitHub\TetrisVideoGame\TetrisVideoGame\obj\x86\Debug\TetrisVideoGame.csproj.CopyComplete

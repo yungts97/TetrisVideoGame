@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{279C69B3-AE8A-416C-B137-53237D5DF908}|Default">
+  <MonoDevelop.Ide.ItemProperties.TetrisVideoGame PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="D:\TetrisVideoGame\TetrisVideoGame\PlayFieldBoard.cs" line="135" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="TetrisVideoGame\Properties\MuteTest.cs">
+    <Files>
+      <File FileName="TetrisVideoGame\PlayFieldBoard.cs" Line="129" Column="4" />
+<<<<<<< HEAD
+      <File FileName="TetrisVideoGame\TetrisGame.cs" Line="525" Column="44" />
+      <File FileName="TetrisVideoGame\Properties\SettingWindow.cs" Line="102" Column="11" />
+=======
+      <File FileName="TetrisVideoGame\TetrisGame.cs" Line="510" Column="41" />
+      <File FileName="TetrisVideoGame\Properties\SettingWindow.cs" Line="16" Column="143" />
+>>>>>>> db616ae5c8020695ec7b3e042905510f9be6d003
+      <File FileName="TetrisVideoGame\Properties\GlobalVariable.cs" Line="1" Column="1" />
+      <File FileName="TetrisVideoGame\Tetromino.cs" Line="41" Column="42" />
+      <File FileName="TetrisVideoGame\HelpWindows.cs" Line="20" Column="19" />
+      <File FileName="TetrisVideoGame\MainWindows.cs" Line="32" Column="26" />
+      <File FileName="TetrisVideoGame\Player.cs" Line="23" Column="39" />
+      <File FileName="TetrisVideoGame\PauseMenuWindows.cs" Line="12" Column="12" />
+      <File FileName="TetrisVideoGame\CollisionDetector.cs" Line="22" Column="8" />
+      <File FileName="TetrisVideoGame\Bomb.cs" Line="21" Column="30" />
+      <File FileName="TetrisVideoGame\HorizontalBomb.cs" Line="20" Column="32" />
+      <File FileName="TetrisVideoGame\LargeBomb.cs" Line="25" Column="7" />
+      <File FileName="TetrisVideoGame\BombMessageBox.cs" Line="19" Column="18" />
+      <File FileName="TetrisVideoGame\ColourBomb.cs" Line="20" Column="28" />
+      <File FileName="TetrisVideoGame\ColourBombUnitTest.cs" Line="65" Column="5" />
+      <File FileName="TetrisVideoGame\HorizontalBombUnitTest.cs" Line="25" Column="18" />
+      <File FileName="TetrisVideoGame\LargeBombUnitTest.cs" Line="14" Column="40" />
+      <File FileName="TetrisVideoGame\MainProgram.cs" Line="1" Column="1" />
+      <File FileName="TetrisVideoGame\HighScoreWindows.cs" Line="74" Column="30" />
+      <File FileName="TetrisVideoGame\Properties\MuteTest.cs" Line="10" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

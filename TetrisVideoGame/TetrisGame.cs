@@ -37,12 +37,14 @@ namespace TetrisVideoGame
 		private PauseMenuWindows myPauseForm;
 		private ConfirmationWindows myConfirmForm;
 		private HelpWindows myHelpForm;
+		private SettingWindow mySettingForm;
 		private SoundPlayer BGMplayer;
 		private BombMessageBox _myBombMsgBox;
 
 		public TetrisGame(int blockSize, int columns, int rows, string playername)
 		{
 			this.MaximumSize = new Size(850, 850);
+			this.BackgroundImage = Image.FromFile(GlobalVariable.image);
 			ColorDictionary = new Dictionary<int, Color>();
 			ColorDictionary.Add(1, Color.FromArgb(44, 209, 255)); // cyan
 			ColorDictionary.Add(2, Color.FromArgb(255, 156, 35)); // orange
@@ -104,7 +106,10 @@ namespace TetrisVideoGame
 			this.Controls.Add(message);
 
 			BGMplayer = new SoundPlayer("bgm.wav");
-			BGMplayer.PlayLooping();
+
+			if(!GlobalVariable.mute)
+				BGMplayer.PlayLooping();
+				
 			this.KeyDown += new KeyEventHandler(this.Form_KeyDown);
 			this.KeyUp += new KeyEventHandler(this.Form_KeyUp);
 
@@ -119,6 +124,7 @@ namespace TetrisVideoGame
 			//time_interval = 1010; //speed of the block drop
 			GameTimer.Interval = time_interval - (_player.Level * 70);
 			GameTimer.Enabled = true;
+
 
 			BombMsgTimer = new Timer();
 			BombMsgTimer.Tick += new EventHandler(this.BombMsgTimer2_Tick);
@@ -500,6 +506,7 @@ namespace TetrisVideoGame
 					GameTimer.Enabled = false;
 					while (true)
 					{
+						this.BackgroundImage = Image.FromFile("image/background_1.jpg");
 						myPauseForm = new PauseMenuWindows();
 						myPauseForm.ShowInTaskbar = false;
 						myPauseForm.BackColor = Color.FromArgb(240, 240, 240);
@@ -514,6 +521,20 @@ namespace TetrisVideoGame
 							break;
 						}
 						else if (myPauseForm.DialogResult == DialogResult.No)
+						{
+							mySettingForm = new SettingWindow();
+							mySettingForm.BackColor = Color.FromArgb(240, 240, 240);
+							mySettingForm.Text = "Setting";
+							mySettingForm.StartPosition = FormStartPosition.CenterScreen;
+							mySettingForm.FormBorderStyle = FormBorderStyle.None;
+							mySettingForm.Width = 420;
+							mySettingForm.Height = 680;
+							if (mySettingForm.ShowDialog() == DialogResult.OK)
+							{
+								mySettingForm.Dispose();
+							}
+						}
+						else if(myPauseForm.DialogResult == DialogResult.No)
 						{
 							myHelpForm = new HelpWindows();
 							myHelpForm.BackColor = Color.FromArgb(240, 240, 240);

@@ -9,10 +9,12 @@ namespace TetrisVideoGame
 		private Button btnResume;
 		private Button btnHelp;
 		private Button btnExit;
+		private Button btnSetting;
 
 
 		public PauseMenuWindows()
 		{
+			this.BackgroundImage = Image.FromFile("image/background_1.jpg");
 			this.MaximumSize = new Size(300, 270);
 
 			btnResume = new Button();
@@ -25,30 +27,44 @@ namespace TetrisVideoGame
 			btnResume.Width = 200;
 			btnResume.Height = 40;
 			btnResume.Left = 50;
-			btnResume.Top = 50;
+			btnResume.Top = 15;
 			btnResume.DialogResult = DialogResult.OK;
 			this.Controls.Add(btnResume);
+
+			btnSetting = new Button();
+			btnSetting.Text = "Setting";
+			btnSetting.FlatStyle = FlatStyle.Flat;
+			btnSetting.BackColor = Color.FromArgb(64, 64, 64);
+			btnSetting.Font = new Font("Arial", 10, FontStyle.Regular);
+			btnSetting.ForeColor = Color.White;
+			btnSetting.AutoSize = true;
+			btnSetting.Width = 200;
+			btnSetting.Height = 40;
+			btnSetting.Left = 50;
+			btnSetting.Top = 70;
+			btnSetting.DialogResult = DialogResult.No;
+			this.Controls.Add(btnSetting);
 
 			btnHelp = new Button();
 			btnHelp.Text = "Help";
 			btnHelp.FlatStyle = FlatStyle.Flat;
-			btnHelp.BackColor = Color.Transparent;
+			btnHelp.BackColor = Color.FromArgb(64, 64, 64);
 			btnHelp.Font = new Font("Arial", 10, FontStyle.Regular);
-			btnHelp.ForeColor = Color.Black;
+			btnHelp.ForeColor = Color.White;
 			btnHelp.AutoSize = true;
 			btnHelp.Width = 200;
 			btnHelp.Height = 40;
 			btnHelp.Left = 50;
-			btnHelp.Top = 120;
+			btnHelp.Top = 125;
 			btnHelp.DialogResult = DialogResult.No;
 			this.Controls.Add(btnHelp);
 
 			btnExit = new Button();
 			btnExit.Text = "Exit";
 			btnExit.FlatStyle = FlatStyle.Flat;
-			btnExit.BackColor = Color.Transparent;
+			btnExit.BackColor = Color.FromArgb(64, 64, 64);
 			btnExit.Font = new Font("Arial", 10, FontStyle.Regular);
-			btnExit.ForeColor = Color.Black;
+			btnExit.ForeColor = Color.White;
 			btnExit.AutoSize = true;
 			btnExit.Width = 200;
 			btnExit.Height = 40;

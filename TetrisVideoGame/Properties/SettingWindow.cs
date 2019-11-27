@@ -3,17 +3,18 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 namespace TetrisVideoGame
 {
-	public class SettingWindow:Form
+	public class SettingWindow : Form 
 	{
 		private Label title;
 		private Button btnChangeBgi;
 		private Button btnOk;
 		private Button btnMute;
+		//private SoundPlayer bgmplayer;
 		string[] images = System.IO.Directory.GetFiles("C:\\Users\\Ballo\\Documents\\GitHub\\TetrisVideoGame\\TetrisVideoGame\\bin\\Debug\\image", "*.jpg");
 		private int i = 0;
-
 
 		public SettingWindow()
 		{
@@ -21,6 +22,10 @@ namespace TetrisVideoGame
 			this.BackgroundImage = Image.FromFile("image/background_1.jpg");
 			this.ShowInTaskbar = false;
 
+			/*bgmplayer = new SoundPlayer("bgm.wav");
+
+			if (!GlobalVariable.mute)
+				bgmplayer.PlayLooping(); */
 
 			title = new Label();
 			title.Text = "Setting";
@@ -59,6 +64,7 @@ namespace TetrisVideoGame
 			btnMute.Height = 40;
 			btnMute.Left = 130;
 			btnMute.Top = 250;
+			btnMute.Click += this.BtnMute;
 			this.Controls.Add(btnMute);
 
 			btnOk = new Button();
@@ -74,20 +80,30 @@ namespace TetrisVideoGame
 			btnOk.Top = 630;
 			btnOk.DialogResult = DialogResult.OK;
 			this.Controls.Add(btnOk);
-	}
+		}
+
 		public void BtnChangeBgi(object sender, EventArgs e)
 		{
-
+			
 			if (images.Length == 0)
-				return;
+				return ;
 
 			var image = Image.FromFile(images[i]);
 			this.BackgroundImage = image;
-			if (++i >= images.Length) i = 0;
+			GlobalVariable.image = images[i];
+			if (++i >= images.Length) i = 0; 
 
 			//this.BackgroundImage = Image.FromFile("image/background_2.jpg");
 
+
+		}
+		public void BtnMute(object sender, EventArgs e)
+		{
+			GlobalVariable.mute = !(GlobalVariable.mute);
+			Console.WriteLine(GlobalVariable.mute.ToString());
 		}
 
 	}
+
+
 }

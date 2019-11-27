@@ -63,6 +63,7 @@
     <Compile Include="HorizontalBombUnitTest.cs" />
     <Compile Include="LargeBombUnitTest.cs" />
     <Compile Include="Properties\SettingWindow.cs" />
+    <Compile Include="Properties\GlobalVariable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />

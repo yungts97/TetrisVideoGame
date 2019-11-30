@@ -15,27 +15,27 @@ namespace TetrisVideoGame
 		}
 		public override void initialize(Form form)
 		{
-			txtTitle = new Label();
+			/*txtTitle = new Label();
 			txtTitle.Text = "Goal";
 			txtTitle.ForeColor = Color.Black;
 			txtTitle.Font = new Font("Arial", 13, FontStyle.Bold);
 			txtTitle.AutoSize = true;
 			txtTitle.Left = 640;
 			txtTitle.Top = 320;
-			form.Controls.Add(txtTitle);
+			form.Controls.Add(txtTitle);*/
 
 			txtGoal = new Label();
 			txtGoal.Text = "0";
-			txtGoal.BackColor = Color.Black;
+			txtGoal.BackColor = Color.Transparent;
 			txtGoal.ForeColor = Color.White;
 			txtGoal.Font = new Font("Arial", 15, FontStyle.Bold);
 			txtGoal.AutoSize = true;
 			txtGoal.BringToFront();
-			txtGoal.Left = 660;
-			txtGoal.Top = 360;
+			txtGoal.Left = 705;
+			txtGoal.Top = 510;
 			form.Controls.Add(txtGoal);
 
-			for (int i = 0; i < _rows; ++i)
+			/*for (int i = 0; i < _rows; ++i)
 			{
 				for (int j = 0; j < _columns; ++j)
 				{
@@ -48,7 +48,7 @@ namespace TetrisVideoGame
 					grids[i, j].Visible = true;
 					form.Controls.Add(grids[i, j]);
 				}
-			}
+			}*/
 		}
 		public void UpdateGoal(int goal)
 		{

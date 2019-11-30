@@ -13,13 +13,13 @@ namespace TetrisVideoGame
 		}
 		public override void initialize(Form form)
 		{
-			HoldShapeLabel = new Label();
+			/*HoldShapeLabel = new Label();
 			HoldShapeLabel.Text = "Hold Shape";
 			HoldShapeLabel.Font = new Font("Arial", 13, FontStyle.Bold);
 			HoldShapeLabel.AutoSize = true;
 			HoldShapeLabel.Left = 80;
 			HoldShapeLabel.Top = 120;
-			form.Controls.Add(HoldShapeLabel);
+			form.Controls.Add(HoldShapeLabel);*/
 
 			for (int i = 0; i < _rows; ++i)
 			{
@@ -29,9 +29,9 @@ namespace TetrisVideoGame
 					grids[i, j].Width = 30;
 					grids[i, j].Height = 30;
 					grids[i, j].BorderStyle = BorderStyle.FixedSingle;
-					grids[i, j].BackColor = Color.Black;
-					grids[i, j].Left = 80 + 30 * j;
-					grids[i, j].Top = 150 + i * 30;
+					grids[i, j].BackColor = Color.FromArgb(51, 50, 50);
+                    grids[i, j].Left = 155 + 30 * j;
+					grids[i, j].Top = 267 + i * 30;
 					grids[i, j].Visible = true;
 					form.Controls.Add(grids[i, j]);
 				}
@@ -44,8 +44,8 @@ namespace TetrisVideoGame
 			{
 				for (int j = 0; j < _columns; ++j)
 				{
-					grids[i, j].BackColor = Color.Black;
-				}
+					grids[i, j].BackColor = Color.FromArgb(51, 50, 50);
+                }
 			}
 
 			for (int i = 0; i < shape.GetLength(0); ++i)

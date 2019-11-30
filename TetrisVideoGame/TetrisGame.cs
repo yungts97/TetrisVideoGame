@@ -42,7 +42,7 @@ namespace TetrisVideoGame
 
 		public TetrisGame(int blockSize, int columns, int rows, string playername)
 		{
-			this.MaximumSize = new Size(850, 850);
+			this.MaximumSize = new Size(950, 900);
 			ColorDictionary = new Dictionary<int, Color>();
 			ColorDictionary.Add(1, Color.FromArgb(44, 209, 255)); // cyan
 			ColorDictionary.Add(2, Color.FromArgb(255, 156, 35)); // orange
@@ -94,16 +94,36 @@ namespace TetrisVideoGame
 
 		public void init()
 		{
-			Label message = new Label();
+
+            PictureBox picGameMode = new PictureBox();
+            picGameMode.Width = 178;
+            picGameMode.Height = 50;
+            picGameMode.Top = 22;
+            picGameMode.Left = 40;
+            picGameMode.BackColor = Color.Transparent;
+            picGameMode.Image = Image.FromFile("classic.png");
+            this.Controls.Add(picGameMode);
+
+            PictureBox picInfo = new PictureBox();
+            picInfo.Width = 872;
+            picInfo.Height = 80;
+            picInfo.Left = 31;
+            picInfo.Top = 93;
+            picInfo.BackColor = Color.Transparent;
+            picInfo.Image = Image.FromFile("classic_info.png");
+            this.Controls.Add(picInfo);
+              
+
+            /*Label message = new Label();
 			message.Text = "Press ESC key to pause the game.";
 			message.ForeColor = Color.Red;
 			message.Font = new Font("Arial", 8, FontStyle.Bold);
 			message.AutoSize = true;
 			message.Left = 240;
 			message.Top = 770;
-			this.Controls.Add(message);
+			this.Controls.Add(message);*/
 
-			BGMplayer = new SoundPlayer("bgm.wav");
+            BGMplayer = new SoundPlayer("bgm.wav");
 			BGMplayer.PlayLooping();
 			this.KeyDown += new KeyEventHandler(this.Form_KeyDown);
 			this.KeyUp += new KeyEventHandler(this.Form_KeyUp);
@@ -269,7 +289,7 @@ namespace TetrisVideoGame
 		private void GetBomb()
 		{
 
-			int rand = rander.Next(1, 11);
+			int rand = rander.Next(1, 2); // 11
 			if (rand == 1)
 			{
 				int rand2 = rander.Next(1, 4);

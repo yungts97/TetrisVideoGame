@@ -10,7 +10,7 @@ namespace TetrisVideoGame
 	{
 		private int[,] gridSigns;
 		private Label[] shadowBlocks;
-		private Panel bg;
+		//private Panel bg;
 		private Dictionary<int, Color> _ColorDictionary;
 		private Color shadowColor;
 		private bool[,] shadowGrids;
@@ -44,23 +44,23 @@ namespace TetrisVideoGame
 					grids[i, j].Width = _blockSize;
 					grids[i, j].Height = _blockSize;
 					grids[i, j].BorderStyle = BorderStyle.FixedSingle;
-					grids[i, j].BackColor = Color.Black;
-					grids[i, j].Left = 270 + _blockSize * j;
-					grids[i, j].Top = 130 + i * _blockSize;
+					grids[i, j].BackColor = Color.FromArgb(51,50,50);
+					grids[i, j].Left = 318 + _blockSize * j;
+					grids[i, j].Top = 226 + i * _blockSize;
 					grids[i, j].Visible = true;
 					//grids[i, j].Paint += new PaintEventHandler(grids_Paint);
 					form.Controls.Add(grids[i, j]);
 				}
 			}
 
-			bg = new Panel();
+			/*bg = new Panel();
 			bg.BackColor = Color.FromArgb(72,72,72);
 			bg.Width = 360;
 			bg.Height = 660;
 			bg.Left = 240;
 			bg.Top = 100;
 			bg.Visible = true;
-			form.Controls.Add(bg);
+			form.Controls.Add(bg);*/
 
 		}
 
@@ -70,9 +70,9 @@ namespace TetrisVideoGame
 			{
 				for (int j = 0; j < _columns; ++j)
 				{
-					grids[i, j].BackColor = Color.Black;
+					grids[i, j].BackColor = Color.FromArgb(51, 50, 50);
 
-				}
+                }
 			}
 			for (int i = 0; i < _rows; ++i)  // draw the current landed blocks
 			{
@@ -119,8 +119,8 @@ namespace TetrisVideoGame
 				{
 					if (_tetromino.TetromoniShape[i, j] != 0)
 					{
-						grids[(_tetromino.PositionY + i), (_tetromino.PositionX + j)].BackColor = Color.Black;
-					}
+						grids[(_tetromino.PositionY + i), (_tetromino.PositionX + j)].BackColor = Color.FromArgb(51, 50, 50);
+                    }
 				}
 			}
 		}
@@ -180,9 +180,9 @@ namespace TetrisVideoGame
 						shadowBlocks[c].Width = _blockSize;
 						shadowBlocks[c].Height = _blockSize;
 						shadowBlocks[c].BorderStyle = BorderStyle.FixedSingle;
-						shadowBlocks[c].BackColor = Color.Black;
-						shadowBlocks[c].Left = 270 + _blockSize * b;
-						shadowBlocks[c].Top = 130 + a * _blockSize;
+						shadowBlocks[c].BackColor = Color.FromArgb(51, 50, 50);
+                        shadowBlocks[c].Left = 318 + _blockSize * b;
+						shadowBlocks[c].Top = 226 + a * _blockSize;
 						shadowBlocks[c].Paint += new PaintEventHandler(grids_Paint);
 						form.Controls.Add(shadowBlocks[c]);
 						if ((_tetromino.PositionY+_tetromino.Height-1) < a)

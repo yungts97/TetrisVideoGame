@@ -14,27 +14,27 @@ namespace TetrisVideoGame
 		}
 		public override void initialize(Form form)
 		{
-			txtTitle = new Label();
+			/*txtTitle = new Label();
 			txtTitle.Text = "Line Cleared";
 			txtTitle.ForeColor = Color.Black;
 			txtTitle.Font = new Font("Arial", 13, FontStyle.Bold);
 			txtTitle.AutoSize = true;
 			txtTitle.Left = 640;
 			txtTitle.Top = 620;
-			form.Controls.Add(txtTitle);
+			form.Controls.Add(txtTitle);*/
 
 			txtLineCleared = new Label();
 			txtLineCleared.Text = "0";
-			txtLineCleared.BackColor = Color.Black;
+			txtLineCleared.BackColor = Color.Transparent;
 			txtLineCleared.ForeColor = Color.White;
 			txtLineCleared.Font = new Font("Arial", 15, FontStyle.Bold);
 			txtLineCleared.AutoSize = true;
 			txtLineCleared.BringToFront();
-			txtLineCleared.Left = 660;
-			txtLineCleared.Top = 660;
+			txtLineCleared.Left = 705;
+			txtLineCleared.Top = 762;
 			form.Controls.Add(txtLineCleared);
 
-			for (int i = 0; i < _rows; ++i)
+			/*for (int i = 0; i < _rows; ++i)
 			{
 				for (int j = 0; j < _columns; ++j)
 				{
@@ -47,7 +47,7 @@ namespace TetrisVideoGame
 					grids[i, j].Visible = true;
 					form.Controls.Add(grids[i, j]);
 				}
-			}
+			}*/
 		}
 		public void UpdateLineCleared(int line)
 		{

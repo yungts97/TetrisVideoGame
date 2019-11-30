@@ -18,26 +18,26 @@ namespace TetrisVideoGame
 		}
 		public override void initialize(Form form)
 		{
-			txtTitle = new Label();
+			/*txtTitle = new Label();
 			txtTitle.Text = "Colour Bomb";
 			txtTitle.ForeColor = Color.Black;
 			txtTitle.Font = new Font("Arial", 11, FontStyle.Bold);
 			txtTitle.AutoSize = true;
 			txtTitle.Left = 80;
 			txtTitle.Top = 330;
-			form.Controls.Add(txtTitle);
+			form.Controls.Add(txtTitle);*/
 
 			txtQty = new Label();
 			txtQty.Text = "x 0";
 			txtQty.ForeColor = Color.White;
-			txtQty.BackColor = Color.Black;
+			txtQty.BackColor = Color.Transparent;
 			txtQty.Font = new Font("Arial", 12, FontStyle.Bold);
 			txtQty.AutoSize = true;
-			txtQty.Left = 160;
-			txtQty.Top = 416;
+			txtQty.Left = 236;
+			txtQty.Top = 529;
 			form.Controls.Add(txtQty);
 
-			for (int i = 0; i < _rows; ++i)
+			/*for (int i = 0; i < _rows; ++i)
 			{
 				for (int j = 0; j < _columns; ++j)
 				{
@@ -50,15 +50,15 @@ namespace TetrisVideoGame
 					grids[i, j].Visible = true;
 					form.Controls.Add(grids[i, j]);
 				}
-			}
+			}*/
 
 			picBomb = new PictureBox();
-			picBomb.Size = new Size(40, 40);
+			picBomb.Size = new Size(32, 32);
 			picBomb.SizeMode = PictureBoxSizeMode.StretchImage;
-			picBomb.BackColor = Color.Black;
+			picBomb.BackColor = Color.Transparent;
 			picBomb.Image = Image.FromFile("bomb.png");
-			picBomb.Top = 380;
-			picBomb.Left = 120;
+			picBomb.Top = 522;
+			picBomb.Left = 160;
 			form.Controls.Add(picBomb);
 			picBomb.BringToFront();
 		}

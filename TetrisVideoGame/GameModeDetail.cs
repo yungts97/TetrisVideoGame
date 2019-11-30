@@ -101,9 +101,28 @@ namespace TetrisVideoGame
                         TetrisGame game = new TetrisGame(30, 10, 20, dialog.txtName.Text);
                         game.StartPosition = FormStartPosition.CenterScreen;
                         game.Text = "My First Form";
-                        game.Width = 850;
-                        game.Height = 850;
-                        game.BackgroundImage = Image.FromFile("bg.png");
+                        game.Width = 950;
+                        game.Height = 900;
+                        if (MainWindows.theme == 1)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme1bg.png");
+                        }
+                        else if (MainWindows.theme == 2)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme2bg.png");
+                        }
+                        else if (MainWindows.theme == 3)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme3bg.png");
+                        }
+                        else if (MainWindows.theme == 4)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme4bg.png");
+                        }
+                        else if (MainWindows.theme == 5)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme5bg.png");
+                        }
                         game.Visible = true;
                     }
                     this.Hide();

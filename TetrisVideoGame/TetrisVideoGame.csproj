@@ -49,6 +49,9 @@
     <Compile Include="Self_rotate_mode.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SettingWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SlipSlideGameMode.cs">
       <SubType>Form</SubType>
     </Compile>

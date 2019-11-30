@@ -19,6 +19,8 @@ namespace TetrisVideoGame
 		private PlayerNameWindows dialog;
 		private HighScoreWindows dialog2;
 		private HelpWindows dialog3;
+        private SettingWindow dialog4;
+        public static int theme = 1;
 
 		public MainWindows()
 		{
@@ -211,8 +213,19 @@ namespace TetrisVideoGame
 
         private void Btn_Setting(object sender, EventArgs e)
         {
-            this.Dispose();
+            dialog4 = new SettingWindow();
+            dialog4.StartPosition = FormStartPosition.CenterScreen;
+            dialog4.FormBorderStyle = FormBorderStyle.None;
+            dialog4.Name = "SettingDialog";
+            dialog4.Width = 732;
+            dialog4.Height = 530;
+            if (dialog4.ShowDialog() == DialogResult.OK)
+            {
+                dialog4.Dispose();
+                ChangeCursor();
+            }
         }
+           
 
         private void Btn_Exit(object sender, EventArgs e)
 		{
@@ -226,6 +239,19 @@ namespace TetrisVideoGame
                 return true;
             }
             return false;
+        }
+        private void ChangeCursor()
+        {
+            if (theme == 1)
+                pointer.Image = Image.FromFile("pointer.png");
+            else if(theme == 2)
+                pointer.Image = Image.FromFile("pointer2.png");
+            else if (theme == 3)
+                pointer.Image = Image.FromFile("pointer3.png");
+            else if (theme == 4)
+                pointer.Image = Image.FromFile("pointer4.png");
+            else if (theme == 5)
+                pointer.Image = Image.FromFile("pointer5.png");
         }
         #region windows shadow effect
         private const int WM_NCHITTEST = 0x84;

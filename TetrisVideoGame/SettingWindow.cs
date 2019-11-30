@@ -10,7 +10,9 @@ namespace TetrisVideoGame
         private PictureBox PicBack;
         private PictureBox pointer1;
         private PictureBox theme1, theme2, theme3, theme4, theme5;
-        private Button dummyButton;
+        private PictureBox bgm1, bgm2;
+        private PictureBox on, off;
+        private PictureBox audioIcon;
 
         public SettingWindow()
         {
@@ -95,21 +97,69 @@ namespace TetrisVideoGame
             pointer1.Top = 218;
             this.Controls.Add(pointer1);
 
-           
+            bgm1 = new PictureBox();
+            bgm1.SizeMode = PictureBoxSizeMode.StretchImage;
+            bgm1.Image = Image.FromFile("bgm1.png");
+            bgm1.BackColor = Color.Transparent;
+            bgm1.Width = 173;
+            bgm1.Height = 47;
+            bgm1.Left = 450;
+            bgm1.Top = 190;
+            bgm1.Click += bgm1_OnClick;
+            this.Controls.Add(bgm1);
 
+            bgm2 = new PictureBox();
+            bgm2.SizeMode = PictureBoxSizeMode.StretchImage;
+            bgm2.Image = Image.FromFile("bgm2.png");
+            bgm2.BackColor = Color.Transparent;
+            bgm2.Width = 181;
+            bgm2.Height = 47;
+            bgm2.Left = 450;
+            bgm2.Top = 248;
+            bgm2.Click += bgm2_OnClick;
+            this.Controls.Add(bgm2);
 
+            on = new PictureBox();
+            on.SizeMode = PictureBoxSizeMode.StretchImage;
+            on.Image = Image.FromFile("on.png");
+            on.BackColor = Color.Transparent;
+            on.Width = 62;
+            on.Height = 47;
+            on.Left = 450;
+            on.Top = 407;
+            on.Click += on_OnClick;
+            this.Controls.Add(on);
+
+            off = new PictureBox();
+            off.SizeMode = PictureBoxSizeMode.StretchImage;
+            off.Image = Image.FromFile("off.png");
+            off.BackColor = Color.Transparent;
+            off.Width = 70;
+            off.Height = 47;
+            off.Left = 537;
+            off.Top = 407;
+            off.Click += off_OnClick;
+            this.Controls.Add(off);
+
+            audioIcon = new PictureBox();
+            audioIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+            audioIcon.Image = Image.FromFile("audio.png");
+            audioIcon.BackColor = Color.Transparent;
+            audioIcon.Width = 30;
+            audioIcon.Height = 30;
+            audioIcon.Left = 567;
+            audioIcon.Top = 363;
+            this.Controls.Add(audioIcon);
+
+            setTheme();
+            setBGM();
+            setVolume();
         }
 
         private void PicBack_OnClick(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
             Close();
-            /*var forms = Application.OpenForms.Cast<Form>().Where(x => x.Name == "MainScreen").FirstOrDefault();
-            if (forms != null)
-            {
-                forms.Show();
-                this.Dispose();
-            }*/
         }
         private void theme1_OnClick(object sender, EventArgs e)
         {
@@ -140,6 +190,84 @@ namespace TetrisVideoGame
             pointer1.Top = 438;
             pointer1.Image = Image.FromFile("pointer5.png");
             MainWindows.theme = 5;
+        }
+        private void bgm1_OnClick(object sender, EventArgs e)
+        {
+            bgm1.Image = Image.FromFile("bgm1_selected.png");
+            bgm2.Image = Image.FromFile("bgm2.png");
+            MainWindows.bgm = 1;
+        }
+        private void bgm2_OnClick(object sender, EventArgs e)
+        {
+            bgm1.Image = Image.FromFile("bgm1.png");
+            bgm2.Image = Image.FromFile("bgm2_selected.png");
+            MainWindows.bgm = 2;
+        }
+        private void on_OnClick(object sender, EventArgs e)
+        {
+            on.Image = Image.FromFile("on_selected.png");
+            off.Image = Image.FromFile("off.png");
+            MainWindows.volume = true;
+            audioIcon.Image = Image.FromFile("audio.png");
+        }
+        private void off_OnClick(object sender, EventArgs e)
+        {
+            on.Image = Image.FromFile("on.png");
+            off.Image = Image.FromFile("off_selected.png");
+            MainWindows.volume = false;
+            audioIcon.Image = Image.FromFile("mute.png");
+        }
+        private void setTheme()
+        {
+            if (MainWindows.theme == 1)
+            {
+                pointer1.Top = 218;
+                pointer1.Image = Image.FromFile("pointer.png");
+            }
+            else if (MainWindows.theme == 2)
+            {
+                pointer1.Top = 273;
+                pointer1.Image = Image.FromFile("pointer2.png");
+            }
+            else if (MainWindows.theme == 3)
+            {
+                pointer1.Top = 328;
+                pointer1.Image = Image.FromFile("pointer3.png");
+            }
+            else if (MainWindows.theme == 4)
+            {
+                pointer1.Top = 383;
+                pointer1.Image = Image.FromFile("pointer4.png");
+            }
+            else if (MainWindows.theme == 5)
+            {
+                pointer1.Top = 438;
+                pointer1.Image = Image.FromFile("pointer5.png");
+            }
+        }
+        private void setBGM()
+        {
+            if (MainWindows.bgm == 1)
+            {
+                bgm1.Image = Image.FromFile("bgm1_selected.png");
+            }
+            else if (MainWindows.bgm == 2)
+            {
+                bgm2.Image = Image.FromFile("bgm2_selected.png");
+            }
+        }
+        private void setVolume()
+        {
+            if (MainWindows.volume)
+            {
+                on.Image = Image.FromFile("on_selected.png");
+                audioIcon.Image = Image.FromFile("audio.png");
+            }
+            else
+            {
+                off.Image = Image.FromFile("off_selected.png");
+                audioIcon.Image = Image.FromFile("mute.png");
+            }
         }
 
         #region windows shadow effect

@@ -39,6 +39,7 @@ namespace TetrisVideoGame
 		private HelpWindows myHelpForm;
 		private SoundPlayer BGMplayer;
 		private BombMessageBox _myBombMsgBox;
+        private String bgmName;
 
 		public TetrisGame(int blockSize, int columns, int rows, string playername)
 		{
@@ -112,7 +113,17 @@ namespace TetrisVideoGame
             picInfo.BackColor = Color.Transparent;
             picInfo.Image = Image.FromFile("classic_info.png");
             this.Controls.Add(picInfo);
-              
+
+            PictureBox picPause = new PictureBox();
+            picPause.Width = 60;
+            picPause.Height = 60;
+            picPause.Top = 829;
+            picPause.Left = 19;
+            picPause.BackColor = Color.Transparent;
+            picPause.Image = Image.FromFile("pause.png");
+            picPause.Click += picPause_OnClick;
+            this.Controls.Add(picPause);
+
 
             /*Label message = new Label();
 			message.Text = "Press ESC key to pause the game.";
@@ -123,8 +134,13 @@ namespace TetrisVideoGame
 			message.Top = 770;
 			this.Controls.Add(message);*/
 
-            BGMplayer = new SoundPlayer("bgm.wav");
-			BGMplayer.PlayLooping();
+            if (MainWindows.bgm == 1)
+                bgmName = "bgm.wav";
+            else
+                bgmName = "bgm2.wav";
+            BGMplayer = new SoundPlayer(bgmName);
+            if (MainWindows.volume)
+                BGMplayer.PlayLooping();
 			this.KeyDown += new KeyEventHandler(this.Form_KeyDown);
 			this.KeyUp += new KeyEventHandler(this.Form_KeyUp);
 
@@ -160,6 +176,61 @@ namespace TetrisVideoGame
 			}
 		}
 
+        private void picPause_OnClick(object sender, EventArgs e)
+        {
+            GameTimer.Enabled = false;
+            while (true)
+            {
+                myPauseForm = new PauseMenuWindows();
+                myPauseForm.ShowInTaskbar = false;
+                myPauseForm.StartPosition = FormStartPosition.CenterScreen;
+                myPauseForm.FormBorderStyle = FormBorderStyle.None;
+                if (myPauseForm.ShowDialog() == DialogResult.OK)
+                {
+                    GameTimer.Enabled = true;
+                    myPauseForm.Dispose();
+                    break;
+                }
+                else if (myPauseForm.DialogResult == DialogResult.No)
+                {
+                    myHelpForm = new HelpWindows();
+                    myHelpForm.StartPosition = FormStartPosition.CenterScreen;
+                    myHelpForm.FormBorderStyle = FormBorderStyle.None;
+                    myHelpForm.Name = "HelpDialog";
+                    myHelpForm.Width = 830;
+                    myHelpForm.Height = 650;
+                    if (myHelpForm.ShowDialog() == DialogResult.OK)
+                    {
+                        myHelpForm.Dispose();
+                    }
+                }
+                else
+                {
+                    myConfirmForm = new ConfirmationWindows();
+                    myConfirmForm.ShowInTaskbar = false;
+                    myConfirmForm.StartPosition = FormStartPosition.CenterScreen;
+                    myConfirmForm.FormBorderStyle = FormBorderStyle.None;
+                    if (myConfirmForm.ShowDialog() == DialogResult.OK)
+                    {
+                        BGMplayer.Stop();
+                        var forms = Application.OpenForms.Cast<Form>().Where(x => x.Name == "MainScreen").FirstOrDefault();
+                        if (forms != null)
+                        {
+                            forms.Show();
+                            myPauseForm.Dispose();
+                            myConfirmForm.Dispose();
+                            this.Dispose();
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        myConfirmForm.Dispose();
+                    }
+                }
+
+            }
+        }
 
 		private void GameTimer_Tick(object sender, EventArgs e)
 		{
@@ -536,11 +607,8 @@ namespace TetrisVideoGame
                     {
                         myPauseForm = new PauseMenuWindows();
                         myPauseForm.ShowInTaskbar = false;
-                        myPauseForm.BackColor = Color.FromArgb(240, 240, 240);
                         myPauseForm.StartPosition = FormStartPosition.CenterScreen;
                         myPauseForm.FormBorderStyle = FormBorderStyle.None;
-                        myPauseForm.Width = 300;
-                        myPauseForm.Height = 270;
                         if (myPauseForm.ShowDialog() == DialogResult.OK)
                         {
                             GameTimer.Enabled = true;
@@ -550,7 +618,6 @@ namespace TetrisVideoGame
                         else if (myPauseForm.DialogResult == DialogResult.No)
                         {
                             myHelpForm = new HelpWindows();
-                            myHelpForm.BackColor = Color.FromArgb(240, 240, 240);
                             myHelpForm.StartPosition = FormStartPosition.CenterScreen;
                             myHelpForm.FormBorderStyle = FormBorderStyle.None;
                             myHelpForm.Name = "HelpDialog";
@@ -565,11 +632,8 @@ namespace TetrisVideoGame
                         {
                             myConfirmForm = new ConfirmationWindows();
                             myConfirmForm.ShowInTaskbar = false;
-                            myConfirmForm.BackColor = Color.FromArgb(240, 240, 240);
                             myConfirmForm.StartPosition = FormStartPosition.CenterScreen;
                             myConfirmForm.FormBorderStyle = FormBorderStyle.None;
-                            myConfirmForm.Width = 350;
-                            myConfirmForm.Height = 130;
                             if (myConfirmForm.ShowDialog() == DialogResult.OK)
                             {
                                 BGMplayer.Stop();

@@ -81,6 +81,7 @@ namespace TetrisVideoGame
                 dialog3.Dispose();
             }
         }
+       
         private void PicStart_OnClick(object sender, EventArgs e)
         {
             if (game_mode == 1)
@@ -90,8 +91,6 @@ namespace TetrisVideoGame
                 dialog.StartPosition = FormStartPosition.CenterScreen;
                 dialog.FormBorderStyle = FormBorderStyle.None;
                 dialog.Name = "PlayerDialog";
-                dialog.Width = 350;
-                dialog.Height = 250;
                 dialog.ShowDialog();
                 if (!dialog.Visible && dialog.flag)
                 {
@@ -137,8 +136,6 @@ namespace TetrisVideoGame
                 dialog.StartPosition = FormStartPosition.CenterScreen;
                 dialog.FormBorderStyle = FormBorderStyle.None;
                 dialog.Name = "PlayerDialog";
-                dialog.Width = 350;
-                dialog.Height = 250;
                 dialog.ShowDialog();
                 if (!dialog.Visible && dialog.flag)
                 {
@@ -148,8 +145,28 @@ namespace TetrisVideoGame
                         SlipSlideGameMode game = new SlipSlideGameMode(30, 10, 20, dialog.txtName.Text);
                         game.StartPosition = FormStartPosition.CenterScreen;
                         game.Text = "My First Form";
-                        game.Width = 850;
-                        game.Height = 850;
+                        game.Width = 950;
+                        game.Height = 900;
+                        if (MainWindows.theme == 1)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme1bg.png");
+                        }
+                        else if (MainWindows.theme == 2)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme2bg.png");
+                        }
+                        else if (MainWindows.theme == 3)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme3bg.png");
+                        }
+                        else if (MainWindows.theme == 4)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme4bg.png");
+                        }
+                        else if (MainWindows.theme == 5)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme5bg.png");
+                        }
                         game.Visible = true;
                     }
                     this.Hide();
@@ -164,8 +181,6 @@ namespace TetrisVideoGame
                 dialog.StartPosition = FormStartPosition.CenterScreen;
                 dialog.FormBorderStyle = FormBorderStyle.None;
                 dialog.Name = "PlayerDialog";
-                dialog.Width = 350;
-                dialog.Height = 250;
                 dialog.ShowDialog();
                 if (!dialog.Visible && dialog.flag)
                 {
@@ -175,8 +190,28 @@ namespace TetrisVideoGame
                         Self_rotate_mode game = new Self_rotate_mode(30, 10, 20, dialog.txtName.Text);
                         game.StartPosition = FormStartPosition.CenterScreen;
                         game.Text = "My First Form";
-                        game.Width = 850;
-                        game.Height = 850;
+                        game.Width = 950;
+                        game.Height = 900;
+                        if (MainWindows.theme == 1)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme1bg.png");
+                        }
+                        else if (MainWindows.theme == 2)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme2bg.png");
+                        }
+                        else if (MainWindows.theme == 3)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme3bg.png");
+                        }
+                        else if (MainWindows.theme == 4)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme4bg.png");
+                        }
+                        else if (MainWindows.theme == 5)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme5bg.png");
+                        }
                         game.Visible = true;
                     }
                     this.Hide();
@@ -191,8 +226,6 @@ namespace TetrisVideoGame
                 dialog.StartPosition = FormStartPosition.CenterScreen;
                 dialog.FormBorderStyle = FormBorderStyle.None;
                 dialog.Name = "PlayerDialog";
-                dialog.Width = 350;
-                dialog.Height = 250;
                 dialog.ShowDialog();
                 if (!dialog.Visible && dialog.flag)
                 {
@@ -202,8 +235,28 @@ namespace TetrisVideoGame
                         OppositeMode game = new OppositeMode(30, 10, 20, dialog.txtName.Text);
                         game.StartPosition = FormStartPosition.CenterScreen;
                         game.Text = "My First Form";
-                        game.Width = 850;
-                        game.Height = 850;
+                        game.Width = 950;
+                        game.Height = 900;
+                        if (MainWindows.theme == 1)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme1bg.png");
+                        }
+                        else if (MainWindows.theme == 2)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme2bg.png");
+                        }
+                        else if (MainWindows.theme == 3)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme3bg.png");
+                        }
+                        else if (MainWindows.theme == 4)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme4bg.png");
+                        }
+                        else if (MainWindows.theme == 5)
+                        {
+                            game.BackgroundImage = Image.FromFile("theme5bg.png");
+                        }
                         game.Visible = true;
                     }
                     this.Hide();

@@ -21,6 +21,8 @@ namespace TetrisVideoGame
 		private HelpWindows dialog3;
         private SettingWindow dialog4;
         public static int theme = 1;
+        public static int bgm = 1;
+        public static Boolean volume = true;
 
 		public MainWindows()
 		{

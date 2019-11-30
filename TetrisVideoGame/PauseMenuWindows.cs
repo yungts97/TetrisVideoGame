@@ -13,47 +13,50 @@ namespace TetrisVideoGame
 
 		public PauseMenuWindows()
 		{
-			this.MaximumSize = new Size(300, 270);
+			this.MaximumSize = new Size(400, 370);
+            this.Width = 400;
+            this.Height = 370;
+            this.BackgroundImage = Image.FromFile("bg.png");
 
-			btnResume = new Button();
+            btnResume = new Button();
 			btnResume.Text = "Resume";
 			btnResume.FlatStyle = FlatStyle.Flat;
-			btnResume.BackColor = Color.FromArgb(64, 64, 64);
-			btnResume.Font = new Font("Arial", 10, FontStyle.Regular);
-			btnResume.ForeColor = Color.White;
-			btnResume.AutoSize = true;
-			btnResume.Width = 200;
-			btnResume.Height = 40;
+			btnResume.BackColor = Color.FromArgb(72, 72, 72);
+            btnResume.Font = new Font("Segeo UI", 15, FontStyle.Bold);
+			btnResume.ForeColor = Color.FromArgb(255, 234, 234);
+            btnResume.AutoSize = true;
+			btnResume.Width = 300;
+			btnResume.Height = 60;
 			btnResume.Left = 50;
-			btnResume.Top = 50;
+			btnResume.Top = 80;
 			btnResume.DialogResult = DialogResult.OK;
 			this.Controls.Add(btnResume);
 
 			btnHelp = new Button();
 			btnHelp.Text = "Help";
 			btnHelp.FlatStyle = FlatStyle.Flat;
-			btnHelp.BackColor = Color.Transparent;
-			btnHelp.Font = new Font("Arial", 10, FontStyle.Regular);
-			btnHelp.ForeColor = Color.Black;
-			btnHelp.AutoSize = true;
-			btnHelp.Width = 200;
-			btnHelp.Height = 40;
+			btnHelp.BackColor = Color.FromArgb(72, 72, 72);
+            btnHelp.Font = new Font("Segeo UI", 15, FontStyle.Bold);
+            btnHelp.ForeColor = Color.FromArgb(255, 234, 234);
+            btnHelp.AutoSize = true;
+			btnHelp.Width = 300;
+			btnHelp.Height = 60;
 			btnHelp.Left = 50;
-			btnHelp.Top = 120;
+			btnHelp.Top = 160;
 			btnHelp.DialogResult = DialogResult.No;
 			this.Controls.Add(btnHelp);
 
 			btnExit = new Button();
 			btnExit.Text = "Exit";
 			btnExit.FlatStyle = FlatStyle.Flat;
-			btnExit.BackColor = Color.Transparent;
-			btnExit.Font = new Font("Arial", 10, FontStyle.Regular);
-			btnExit.ForeColor = Color.Black;
-			btnExit.AutoSize = true;
-			btnExit.Width = 200;
-			btnExit.Height = 40;
+			btnExit.BackColor = Color.FromArgb(72, 72, 72);
+            btnExit.Font = new Font("Segeo UI", 15, FontStyle.Bold);
+            btnExit.ForeColor = Color.FromArgb(255, 234, 234);
+            btnExit.AutoSize = true;
+			btnExit.Width = 300;
+			btnExit.Height = 60;
 			btnExit.Left = 50;
-			btnExit.Top = 190;
+			btnExit.Top = 240;
 			btnExit.DialogResult = DialogResult.Cancel;
 			this.Controls.Add(btnExit);
 		}

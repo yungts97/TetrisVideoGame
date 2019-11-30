@@ -15,25 +15,29 @@ namespace TetrisVideoGame
 
 		public PlayerNameWindows()
 		{
-			this.MaximumSize = new Size(350, 250);
+            this.Width = 450;
+            this.Height = 350;
+			this.MaximumSize = new Size(450, 300);
+            this.BackgroundImage = Image.FromFile("bg.png");
 			this.ShowInTaskbar = false;
 			this.KeyPreview = true;
 
 			flag = false;
 			message = new Label();
 			message.Text = "Please enter your name:";
-			message.ForeColor = Color.FromArgb(64, 64, 64);
-			message.Font = new Font("Arial", 13, FontStyle.Regular);
+            message.ForeColor = Color.White;
+            message.BackColor = Color.Transparent;
+			message.Font = new Font("Segoe UI", 22, FontStyle.Bold);
 			message.AutoSize = true;
 			message.Left = 30;
-			message.Top = 60;
+			message.Top = 70;
 			this.Controls.Add(message);
 
 			txtName = new TextBox();
-			txtName.Width = 290;
-			txtName.Height = 80;
-			txtName.Font = new Font("Arial", 13, FontStyle.Regular);
-			txtName.Top = 100;
+			txtName.Width = 390;
+			txtName.Height = 100;
+			txtName.Font = new Font("Arial", 20, FontStyle.Regular);
+			txtName.Top = 130;
 			txtName.Left = 30;
 			this.Controls.Add(txtName);
 
@@ -56,28 +60,28 @@ namespace TetrisVideoGame
 			btnOk = new Button();
 			btnOk.Text = "Ok";
 			btnOk.FlatStyle = FlatStyle.Flat;
-			btnOk.BackColor = Color.FromArgb(64, 64, 64);
-			btnOk.Font = new Font("Arial", 10, FontStyle.Regular);
-			btnOk.ForeColor = Color.White;
+            btnOk.BackColor = Color.FromArgb(72,72,72);
+			btnOk.Font = new Font("Segoe UI", 15, FontStyle.Regular);
+			btnOk.ForeColor = Color.FromArgb(255,234,234);
 			btnOk.AutoSize = true;
-			btnOk.Width = 130;
-			btnOk.Height = 40;
+			btnOk.Width = 170;
+			btnOk.Height = 50;
 			btnOk.Left = 30;
-			btnOk.Top = 165;
+			btnOk.Top = 205;
 			btnOk.Click += this.BtnOk_Click;
 			this.Controls.Add(btnOk);
 
 			btnCancel = new Button();
 			btnCancel.Text = "Cancel";
 			btnCancel.FlatStyle = FlatStyle.Flat;
-			btnCancel.BackColor = Color.Transparent;
-			btnCancel.Font = new Font("Arial", 10, FontStyle.Regular);
-			btnCancel.ForeColor = Color.Black;
+			btnCancel.BackColor = Color.FromArgb(72,72,72);
+			btnCancel.Font = new Font("Segoe UI", 15, FontStyle.Regular);
+			btnCancel.ForeColor = Color.FromArgb(255,234,234);
 			btnCancel.AutoSize = true;
-			btnCancel.Width = 130;
-			btnCancel.Height = 40;
-			btnCancel.Left = 190;
-			btnCancel.Top = 165;
+			btnCancel.Width = 170;
+			btnCancel.Height = 50;
+			btnCancel.Left = 250;
+			btnCancel.Top = 205;
 			btnCancel.Click += this.BtnCancel_Click;
 			this.Controls.Add(btnCancel);
 

@@ -12,13 +12,17 @@ namespace TetrisVideoGame
 
 		public ConfirmationWindows()
 		{
-			this.MaximumSize = new Size(350, 130);
-			this.ShowInTaskbar = false;
+			this.MaximumSize = new Size(400, 160);
+            this.Width = 400;
+            this.Height = 160;
+            this.ShowInTaskbar = false;
+            this.BackgroundImage = Image.FromFile("bg.png");
 
-			message = new Label();
+            message = new Label();
 			message.Text = "Are you sure you want to exit?";
-			message.ForeColor = Color.FromArgb(64, 64, 64);
-			message.Font = new Font("Arial", 12, FontStyle.Bold);
+			message.ForeColor = Color.FromArgb(255, 234, 234);
+            message.BackColor = Color.Transparent;
+            message.Font = new Font("Segeo UI", 15, FontStyle.Bold);
 			message.AutoSize = true;
 			message.Left = 50;
 			message.Top = 30;
@@ -27,26 +31,28 @@ namespace TetrisVideoGame
 			btnConfirm = new Button();
 			btnConfirm.Text = "Confirm";
 			btnConfirm.FlatStyle = FlatStyle.Flat;
-			btnConfirm.BackColor = Color.FromArgb(64, 64, 64);
-			btnConfirm.Font = new Font("Arial", 12, FontStyle.Regular);
-			btnConfirm.ForeColor = Color.White;
-			btnConfirm.AutoSize = true;
-			btnConfirm.Width = 95;
-			btnConfirm.Height = 35;
-			btnConfirm.Left = 65;
-			btnConfirm.Top = 75;
+			btnConfirm.BackColor = Color.FromArgb(72, 72, 72);
+            btnConfirm.Font = new Font("Segeo UI", 12, FontStyle.Regular);
+			btnConfirm.ForeColor = Color.FromArgb(255, 234, 234);
+            btnConfirm.AutoSize = true;
+			btnConfirm.Width = 120;
+			btnConfirm.Height = 45;
+			btnConfirm.Left = 60;
+			btnConfirm.Top = 85;
 			btnConfirm.DialogResult = DialogResult.OK;
 			this.Controls.Add(btnConfirm);
 
 			btnCancel = new Button();
 			btnCancel.Text = "Cancel";
 			btnCancel.FlatStyle = FlatStyle.Flat;
-			btnCancel.Font = new Font("Arial", 12, FontStyle.Regular);
-			btnCancel.AutoSize = true;
-			btnCancel.Width = 95;
-			btnCancel.Height = 30;
-			btnCancel.Left = 195;
-			btnCancel.Top = 75;
+            btnCancel.BackColor = Color.FromArgb(72, 72, 72);
+            btnCancel.Font = new Font("Segeo UI", 12, FontStyle.Regular);
+            btnCancel.ForeColor = Color.FromArgb(255, 234, 234);
+            btnCancel.AutoSize = true;
+			btnCancel.Width = 120;
+			btnCancel.Height = 45;
+			btnCancel.Left = 210;
+			btnCancel.Top = 85;
 			btnCancel.DialogResult = DialogResult.Cancel;
 			this.Controls.Add(btnCancel);
 		}
